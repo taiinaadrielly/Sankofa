@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankofa</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <!-- importação da fonte montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+
+</head>
+
+<body class="bg-slate-50 w-full min-h-screen flex flex-col">
+
+    <header class="flex flex-row bg-amber-950 justify-between items-center py-6 px-10 border-b-13 border-b-slate-50">
+        <div class="flex space-x-10 relative items-center">
+            <a href="index.html">
+                <h1 class="text-4xl text-white">Sankofa</h1>
+            </a>
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder='Inserir busca'
+                    class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-10 bg-contain bg-amber-50 rounded-md w-96" />
+                <button type="submit"
+                    class="text-amber-950 rounded bg-slate-50 px-2 hover:bg-slate-200 cursor-pointer">Buscar</button>
+                <div id="results" class="bg-white w-96 px-8 items-start mt-0.5"></div>
+            </form>
+        </div>
+
+        <nav>
+            <a href="index.html"
+                class=" font-bold text-amber-950 bg-slate-50 rounded w-35 hover:bg-slate-200 px-9 ">INÍCIO</a>
+            <a href="biografias.html"
+                class="font-bold text-amber-950 bg-slate-50 rounded w-35 hover:bg-slate-200 px-9">BIOGRAFIAS</a>
+            <a href="sobrenos.html"
+                class="font-bold  text-amber-950 bg-slate-50 rounded w-35 hover:bg-slate-200 px-9">SOBRE
+                NÓS</a>
+        </nav>
+
+    </header>
+
+    <footer class="mt-auto w-full bg-amber-950 text-white items-center justify-items-center">
+        <div class="px-80">
+            <div class="text-justify text-7xl">
+                <h2 class="text-amber-950">
+                    “Não sou descendente de escravos. Sou descendente de pessoas que foram escravizadas.”
+                </h2>
+            </div>
+            <div class="text-4xl text-right">
+                <h3>-Makota Valdinha</h2>
+            </div>
+        </div>
+        <div class="w-9/12 mx-auto px-5 py-8 grid grid-cols-3 gap-6 items-center justify-items-center">
+            <div class="">
+                <h3 class="font-semibold text-3xl py-2 tracking-wider">FALE CONOSCO</h3>
+                <p class="text-xl px-4"> (00) 00000-0000 </p>
+                <p class="py-1 text-xl px-4">AAAAAA@gmail.com</p>
+            </div>
+            <div class="w-1 h-40 bg-white mx-auto"></div>
+            <div class="">
+                <h3 class="font-semibold text-3xl py-2 tracking-wider">REDES SOCIAIS</h3>
+                <div class="grid grid-cols-3 gap-3 place-items-center mt-2 px-2">
+                    <img src="img/linkedin.png" alt="" class="h-8 w-8">
+                    <img src="img/instagram.png" alt="" class="h-8 w-8">
+                    <img src="img/facebook.png" alt="" class="h-8 w-8">
+                </div>
+                <p class="py-3 px-4 text-xl">@AAAAAAAA</p>
+            </div>
+        </div>
+        <p class="">© 2025 Grupo 9.Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
