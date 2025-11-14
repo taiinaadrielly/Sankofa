@@ -31,6 +31,11 @@
       font-style: normal;
     }
 
+    h6 {
+      font-family: "Tenor Sans", sans-serif;
+      font-style: normal;
+    }
+
     h2 {
       font-family: "Pinyon Script", cursive;
       font-weight: 400;
@@ -54,39 +59,40 @@
       font-size: 24px;
       /* Tamanho do ícone da seta */
     }
+
+    body{
+      background-color:#F5F5DC
+    }
   </style>
+
+
 
   <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
 </head>
 
-<body class="bg-slate-50 w-full min-h-screen flex flex-col">
+<body class="bg-slate-300 w-full min-h-screen flex flex-col">
 
   <header class="flex flex-row bg-amber-950 justify-between items-center px-10 min-h-40">
     <div class="flex space-x-10 relative items-center">
       <a href="index.html">
-        <h1 class="text-4xl text-white">Sankofa</h1>
+        <h1 class="text-5xl text-white px-16">Sankofa</h1>
       </a>
       <form id="searchForm">
         <input type="text" id="searchInput" placeholder='Inserir busca'
-          class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-10 bg-contain bg-amber-50 rounded-md w-96" />
+          class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-10 bg-contain bg-amber-50 rounded-xl w-[40rem] py-1.5 ml-80" />
         <button type="submit"
-          class="text-amber-950 rounded bg-slate-50 px-2 hover:bg-slate-200 cursor-pointer">Buscar</button>
-        <div id="results" class="bg-white w-96 px-8 items-start mt-0.5"></div>
+          class="text-amber-950 font-semibold rounded-lg bg-slate-50 p-1.5 px-2.5 ml-3 hover:bg-slate-200 text-base cursor-pointer">Buscar</button>
+        <div id="results" class="bg-white w-[40rem] px-8  items-start mt-0.5  ml-80"></div>
       </form>
     </div>
 
-    <nav>
-      <a href="index.html" class="font-bold  text-amber-950 bg-slate-50 rounded w-35 hover:bg-slate-200 px-9">INÍCIO</a>
-      <a href="sobreNos.html" class="font-bold text-amber-950 bg-slate-50 rounded w-35 hover:bg-slate-200 px-9">SOBRE
-        NÓS</a>
-      <a href="" class="font-bold text-amber-950 bg-slate-50 rounded w-35 hover:bg-slate-200 px-9">BIOGRAFIAS</a>
-    </nav>
+  
   </header>
 
   <nav class="font-bold text-amber-950 bg-slate-50 flex justify-around">
-    <a href="index.html" class=" hover:bg-slate-200">INÍCIO</a>
-    <a href="sobreNos.html" class=" hover:bg-slate-200">SOBRE NÓS</a>
-    <a href="#" class="hover:bg-slate-200">BIOGRAFIAS</a>
+    <a href="index.html" class=" hover:bg-slate-200 text-xl py-2.5">INÍCIO</a>
+    <a href="sobreNos.html" class=" hover:bg-slate-200 text-xl py-2.5">SOBRE NÓS</a>
+    <a href="#" class="hover:bg-slate-200 text-xl py-2.5">BIOGRAFIAS</a>
   </nav>
 
   <main class="flex-1">
@@ -118,14 +124,28 @@
   </main>
 
   <div id="possiveisResults">
-    <a href="biografias.html" id="bio"></a>
+    <a href="biografias.html" id="biografias"></a>
+    <a href="sobreNos.html" id="sobre nos"></a>
+    <a href="index.html" id="inicio"></a>
+    <a href="sobreNos.html" id="sobre nós"></a>
+    <a href="index.html" id="início"></a>
+      <a href="biografias.html" id="biografia"></a>
     <a href="sobreNos.html" id="sobre"></a>
-    <a href="index.html" id="index"></a>
+    <a href="index.html" id="começo"></a>
+      <a href="sobreNos.html" id="saber mais"></a>
   </div>
 
-  <h1 class="text-8xl text-center text-amber-950 py-16 mt-24" id="sobreNos">Nosso Projeto</h1>
+  <h6 class="text-8xl text-center text-amber-950 py-16 mt-24" id="sobreNos">Nosso Projeto</h6>
   <div class="text-justify px-72 text-4xl mb-32">
-    <p>   Nosso site tem como propósito valorizar e divulgar a cultura afro-brasileira por meio da história e das pessoas que a construíram. <br> <br>   Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas. Para evidenciar a evolução da luta contra o racismo, organizamos algumas dessas histórias em uma linha do tempo que conecta pessoas com profissões semelhantes, destacando avanços, desafios e conquistas ao longo dos anos. <br> <br>Sankofa é um conceito e símbolo da cultura africana Adinkra que representa a sabedoria de retornar ao passado para aprender com ele e, assim, construir um futuro melhor. Inspirados por esse significado, buscamos resgatar trajetórias que ajudaram a moldar a identidade negra no Brasil e que continuam a inspirar novas gerações.<br> <br>No Sankofa, acreditamos que compreender o passado é essencial para transformar o presente e construir um futuro mais justo e igualitário.
+    <p> Nosso site tem como propósito valorizar e divulgar a cultura afro-brasileira por meio da história e das pessoas
+      que a construíram. <br> <br> Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas.
+      Para evidenciar a evolução da luta contra o racismo, organizamos algumas dessas histórias em uma linha do tempo
+      que conecta pessoas com profissões semelhantes, destacando avanços, desafios e conquistas ao longo dos anos. <br>
+      <br>Sankofa é um conceito e símbolo da cultura africana Adinkra que representa a sabedoria de retornar ao passado
+      para aprender com ele e, assim, construir um futuro melhor. Inspirados por esse significado, buscamos resgatar
+      trajetórias que ajudaram a moldar a identidade negra no Brasil e que continuam a inspirar novas gerações.<br>
+      <br>No Sankofa, acreditamos que compreender o passado é essencial para transformar o presente e construir um
+      futuro mais justo e igualitário.
     </p>
 
   </div>
@@ -138,111 +158,123 @@
   </div>
 
   <!-- 3. NOVA SEÇÃO COM O CARROSSEL DE BIOGRAFIAS -->
-  <section class="w-[80rem] py-16 px-4 md:px-20 mx-auto" id="carrosselb">
-    <h1 class="text-7xl text-center text-amber-950 mb-12">Biografias em Destaque</h1>
-    <div class="swiper biographies-swiper relative">
-      <div class="swiper-wrapper pb-12">
+  <section class="w-[87rem] py-16 mx-auto mb-32 " id="carrosselb">
+    <h6 class="text-7xl text-center text-amber-950 mb-24">Biografias em Destaque</h6>
+    <div class="grid grid-cols-12 h-full mx-auto">
 
-        <!-- Card Biografia 1 -->
-        <div class="swiper-slide h-auto">
-          <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
-            <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
-              class="w-full h-64 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Machado de Assis</h3>
-              <p class="text-gray-700 text-lg flex-1">
-                Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas que
-                analisavam a sociedade de sua época com ironia e profundidade psicológica.
-              </p>
+      <button
+        class=" bio-prev  text-amber-950 bg-white rounded-full w-16 h-16  text-4xl my-auto shadow-md hover:bg-gray-100"
+        aria-label="Anterior">&lt;</button>
+      <div class="col-span-10">
+        <div class="swiper biographies-swiper ">
+          <div class="swiper-wrapper pb-12">
+
+            <!-- Card Biografia 1 -->
+            <div class="swiper-slide">
+              <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
+                  class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
+                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Machado de Assis</h3>
+                  <p class="text-gray-700 text-lg flex-1">
+                    Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas
+                    que
+                    analisavam a sociedade de sua época com ironia e profundidade psicológica.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Card Biografia 2 -->
-        <div class="swiper-slide h-64">
-          <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
-            <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)" alt="Foto de Carolina Maria de Jesus"
-              class="w-full h-64 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Carolina Maria de Jesus</h3>
-              <p class="text-gray-700 text-lg flex-1">
-                Escritora, compositora e poetisa, sua obra "Quarto de Despejo: Diário de uma Favelada" é um marco na
-                literatura, retratando a dura realidade da vida na favela do Canindé, em São Paulo.
-              </p>
+            <!-- Card Biografia 2 -->
+            <div class="swiper-slide">
+              <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)"
+                  alt="Foto de Carolina Maria de Jesus" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
+                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Carolina Maria de Jesus</h3>
+                  <p class="text-gray-700 text-lg flex-1">
+                    Escritora, compositora e poetisa, sua obra "Quarto de Despejo: Diário de uma Favelada" retrata a
+                    dura
+                    realidade da vida na favela do Canindé, em São Paulo.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Card Biografia 3 -->
-        <div class="swiper-slide h-auto">
-          <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
-            <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
-              class="w-full h-64 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Abdias do Nascimento</h3>
-              <p class="text-gray-700 text-lg flex-1">
-                Ator, poeta, escritor, dramaturgo e ativista dos direitos civis e humanos das populações negras. Foi uma
-                figura central na luta contra o racismo e pela valorização da cultura afro-brasileira.
-              </p>
+            <!-- Card Biografia 3 -->
+            <div class="swiper-slide h-3/6">
+              <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
+                  class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
+                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Abdias do Nascimento</h3>
+                  <p class="text-gray-700 text-lg flex-1">
+                    Ator, poeta, escritor, dramaturgo e ativista dos direitos civis e humanos das populações negras. Foi
+                    uma
+                    figura central na luta contra o racismo e pela valorização da cultura afro-brasileira.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Duplicando cards existentes para criar mais slides -->
-        <!-- Card Biografia 4 (duplicado de 1) -->
-        <div class="swiper-slide h-auto">
-          <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
-            <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
-              class="w-full h-64 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Machado de Assis</h3>
-              <p class="text-gray-700 text-lg flex-1">
-                Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas que
-                analisavam a sociedade de sua época com ironia e profundidade psicológica.
-              </p>
+            <!-- Duplicando cards existentes para criar mais slides -->
+            <!-- Card Biografia 4 (duplicado de 1) -->
+            <div class="swiper-slide h-3/6">
+              <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
+                  class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
+                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Machado de Assis</h3>
+                  <p class="text-gray-700 text-lg flex-1">
+                    Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas
+                    que
+                    analisavam a sociedade de sua época com ironia e profundidade psicológica.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Card Biografia 5 (duplicado de 2) -->
-        <div class="swiper-slide h-64">
-          <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
-            <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)" alt="Foto de Carolina Maria de Jesus"
-              class="w-full h-64 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Carolina Maria de Jesus</h3>
-              <p class="text-gray-700 text-lg flex-1">
-                Escritora, compositora e poetisa, sua obra "Quarto de Despejo: Diário de uma Favelada" é um marco na
-                literatura, retratando a dura realidade da vida na favela do Canindé, em São Paulo.
-              </p>
+            <!-- Card Biografia 5 (duplicado de 2) -->
+            <div class="swiper-slide h-3/6">
+              <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)"
+                  alt="Foto de Carolina Maria de Jesus" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
+                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Carolina Maria de Jesus</h3>
+                  <p class="text-gray-700 text-lg flex-1">
+                    Escritora, compositora e poetisa, sua obra "Quarto de Despejo: Diário de uma Favelada" retrata a
+                    dura
+                    realidade da vida na favela do Canindé, em São Paulo.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Card Biografia 6 (duplicado de 3) -->
-        <div class="swiper-slide h-auto">
-          <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
-            <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
-              class="w-full h-64 object-cover">
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Abdias do Nascimento</h3>
-              <p class="text-gray-700 text-lg flex-1">
-                Ator, poeta, escritor, dramaturgo e ativista dos direitos civis e humanos das populações negras. Foi uma
-                figura central na luta contra o racismo e pela valorização da cultura afro-brasileira.
-              </p>
+            <!-- Card Biografia 6 (duplicado de 3) -->
+            <div class="swiper-slide h-3/6">
+              <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full ">
+                <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
+                  class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
+                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Abdias do Nascimento</h3>
+                  <p class="text-gray-700 text-lg flex-1">
+                    Ator, poeta, escritor, dramaturgo e ativista dos direitos civis e humanos das populações negras. Foi
+                    uma
+                    figura central na luta contra o racismo e pela valorização da cultura afro-brasileira.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <!-- Botões de Navegação posicionados sobre os cards (um à esquerda, outro à direita) -->
       <button
-        class="bio-prev absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-50 text-amber-950 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-md hover:bg-gray-100"
-        aria-label="Anterior">&lt;</button>
-      <button
-        class="bio-next absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-50 text-amber-950 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-md hover:bg-gray-100"
+        class="bio-next text-amber-950 bg-white rounded-full w-16 h-16  text-4xl my-auto ml-10 shadow-md hover:bg-gray-100"
         aria-label="Próximo">&gt;</button>
-    </div>
 
+
+    </div>
   </section>
 
 
@@ -279,35 +311,14 @@
     <p class="text-center pb-4">"© 2025 Grupo 9. Todos os direitos reservados."</p>
   </footer>
 
-  <script src="script.js"></script>
+
 
   <!-- 4. ADICIONADO SCRIPT DO SWIPER.JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- 5. INICIALIZAÇÃO DOS CARROSSÉIS -->
-  <script>
-    // Inicialização do Carrossel do Banner Principal
-    const mainBannerSwiper = new Swiper('.main-banner-swiper', {
-      loop: true, // Cria um loop infinito
-      effect: 'fade', // Efeito de transição
-      autoplay: {
-        delay: 4000, // Muda de slide a cada 4 segundos
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
 
-    // Inicialização do Carrossel de Biografias
-    // (Inicialização do carrossel de biografias movida para script.js)
-  </script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>

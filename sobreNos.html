@@ -54,39 +54,40 @@
       font-size: 24px;
       /* Tamanho do ícone da seta */
     }
+    
+    body{
+      background-color:#F5F5DC
+    }
   </style>
 
   <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
 </head>
 
-<body class="bg-slate-50 w-full min-h-screen flex flex-col">
+<body class=" w-full min-h-screen flex flex-col">
 
   <header class="flex flex-row bg-amber-950 justify-between items-center px-10 min-h-40">
     <div class="flex space-x-10 relative items-center">
       <a href="index.html">
-        <h1 class="text-4xl text-white">Sankofa</h1>
+        <h1 class="text-5xl text-white px-16">Sankofa</h1>
       </a>
-      <form id="searchForm">
-        <input type="text" id="searchInput" placeholder='Inserir busca'
-          class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-10 bg-contain bg-amber-50 rounded-md w-96" />
-        <button type="submit"
-          class="text-amber-950 rounded bg-slate-50 px-2 hover:bg-slate-200 cursor-pointer">Buscar</button>
-        <div id="results" class="bg-white w-96 px-8 items-start mt-0.5"></div>
+      <form id="searchForm" class="flex flex-col">
+        <div class="flex items-center">
+          <input type="text" id="searchInput" placeholder='Inserir busca'
+            class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-10 bg-contain bg-amber-50 rounded-xl w-[40rem] py-1.5 ml-80" />
+          <button type="submit"
+            class="text-amber-950 font-semibold rounded-lg bg-slate-50 p-1.5 px-2.5 ml-3 hover:bg-slate-200 text-base cursor-pointer">Buscar</button>
+        </div>
+        <div id="results" class="bg-white w-96 px-8 items-start mt-2"></div>
       </form>
     </div>
 
-    <nav>
-      <a href="index.html" class="font-bold  text-amber-950 bg-slate-50 rounded w-35 hover:bg-slate-200 px-9">INÍCIO</a>
-      <a href="sobreNos.html" class="font-bold text-amber-950 bg-slate-50 rounded w-35 hover:bg-slate-200 px-9">SOBRE
-        NÓS</a>
-      <a href="#" class="font-bold text-amber-950 bg-slate-50 rounded w-35 hover:bg-slate-200 px-9">BIOGRAFIAS</a>
-    </nav>
+  
   </header>
 
   <nav class="font-bold text-amber-950 bg-slate-50 flex justify-around">
-    <a href="index.html" class=" hover:bg-slate-200">INÍCIO</a>
-    <a href="sobreNos.html" class=" hover:bg-slate-200">SOBRE NÓS</a>
-    <a href="#" class="hover:bg-slate-200">BIOGRAFIAS</a>
+    <a href="index.html" class=" hover:bg-slate-200 text-xl py-2.5">INÍCIO</a>
+    <a href="sobreNos.html" class=" hover:bg-slate-200 text-xl py-2.5">SOBRE NÓS</a>
+    <a href="#" class="hover:bg-slate-200 text-xl py-2.5">BIOGRAFIAS</a>
   </nav>
 
 <main class="min-h-screen bg-amber-50">
