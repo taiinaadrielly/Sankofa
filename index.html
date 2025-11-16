@@ -7,25 +7,28 @@
   <title>Sankofa</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+  <!--fontes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Tenor+Sans&display=swap"
     rel="stylesheet">
 
-  <!-- 1. ADICIONADO CSS DO SWIPER.JS -->
+  <!-- 1. ADICIONADO CSS DO SWIPER.JS (biblioteca css) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
-    /* Suas fontes e estilos permanecem aqui */
+    /* fontes */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Tenor+Sans&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+    /* definindo a fonte dos links */
     a {
       font-family: "Montserrat", serif;
     }
 
+    /* definindo a fonte de cada tipo de titulo */
     h1 {
       font-family: "Tenor Sans", sans-serif;
       font-style: normal;
@@ -41,6 +44,7 @@
       font-weight: 400;
       font-style: normal;
     }
+
 
     /* Estilos para as setas de navegação do Swiper */
     .swiper-button-next,
@@ -60,43 +64,46 @@
       /* Tamanho do ícone da seta */
     }
 
-    body{
-      background-color:#F5F5DC
+    /* cor do body */
+    body {
+      background-color: #F5F5DC
     }
   </style>
 
-
-
+  <!-- colocando o favicon (imagem do site) -->
   <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
 </head>
 
-<body class="bg-slate-300 w-full min-h-screen flex flex-col">
-
+<body>
+  <!-- cabeçalho: itens organizados um do lado do outro com flex -->
   <header class="flex flex-row bg-amber-950 justify-between items-center px-10 min-h-40">
-    <div class="flex space-x-10 relative items-center">
+    <!-- div para conseguir centralizar o sankofa e separar ele da barra de pesquisa -->
+    <div class="flex relative items-center">
+      <!-- sankofa do cabeçalho em um link para a pagina inicial -->
       <a href="index.html">
         <h1 class="text-5xl text-white px-16">Sankofa</h1>
       </a>
-      <form id="searchForm">
-        <input type="text" id="searchInput" placeholder='Inserir busca'
-          class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-10 bg-contain bg-amber-50 rounded-xl w-[40rem] py-1.5 ml-80" />
-        <button type="submit"
-          class="text-amber-950 font-semibold rounded-lg bg-slate-50 p-1.5 px-2.5 ml-3 hover:bg-slate-200 text-base cursor-pointer">Buscar</button>
-        <div id="results" class="bg-white w-[40rem] px-8  items-start mt-0.5  ml-80"></div>
+      <!-- formulario para o usuario inserir a buscar -->
+      <form id="searchForm" class="flex flex-col">
+        <div class="flex items-center">
+          <input type="text" id="searchInput" placeholder='Inserir busca'
+            class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-10 bg-contain bg-amber-50 rounded-xl w-[40rem] py-1.5 ml-80" />
+          <button type="submit"
+            class="text-amber-950 font-semibold rounded-lg bg-slate-50 p-1.5 px-2.5 ml-3 hover:bg-slate-200 text-base cursor-pointer">Buscar</button>
+        </div>
+        <div id="results" class="bg-white w-[40rem] px-8 items-start mt-0.5 ml-80"></div>
       </form>
     </div>
-
-  
   </header>
-
+  <!-- menu de navegação do desktop -->
   <nav class="font-bold text-amber-950 bg-slate-50 flex justify-around">
     <a href="index.html" class=" hover:bg-slate-200 text-xl py-2.5">INÍCIO</a>
     <a href="sobreNos.html" class=" hover:bg-slate-200 text-xl py-2.5">SOBRE NÓS</a>
     <a href="#" class="hover:bg-slate-200 text-xl py-2.5">BIOGRAFIAS</a>
   </nav>
-
+  <!-- conteiner do conteudo principal -->
   <main class="flex-1">
-    <!-- 2. CARROSSEL DO BANNER PRINCIPAL (SUBSTITUI A IMAGEM ESTÁTICA) -->
+    <!-- CARROSSEL DO BANNER PRINCIPAL: ocupa todo o espaço horizontalmente e 1110 pixels verticalmente-->
     <div class="swiper main-banner-swiper w-full h-[1110px] shadow-inner">
       <div class="swiper-wrapper ">
         <!-- Slide 1 -->
@@ -117,26 +124,27 @@
       </div>
       <!-- Paginação (pontos) -->
       <div class="swiper-pagination"></div>
-      <!-- Botões de Navegação (setas) -->
+      <!-- Botões de Navegação (setas) configurados no head -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
   </main>
-
+  <!--  possiveis resultados para a pesquisa-->
   <div id="possiveisResults">
     <a href="biografias.html" id="biografias"></a>
     <a href="sobreNos.html" id="sobre nos"></a>
     <a href="index.html" id="inicio"></a>
     <a href="sobreNos.html" id="sobre nós"></a>
     <a href="index.html" id="início"></a>
-      <a href="biografias.html" id="biografia"></a>
+    <a href="biografias.html" id="biografia"></a>
     <a href="sobreNos.html" id="sobre"></a>
     <a href="index.html" id="começo"></a>
-      <a href="sobreNos.html" id="saber mais"></a>
+    <a href="sobreNos.html" id="saber mais"></a>
   </div>
 
+  <!-- introdução do sobre nós  -->
   <h6 class="text-8xl text-center text-amber-950 py-16 mt-24" id="sobreNos">Nosso Projeto</h6>
-  <div class="text-justify px-72 text-4xl mb-32">
+  <div class="text-justify px-72 text-4xl mb-28">
     <p> Nosso site tem como propósito valorizar e divulgar a cultura afro-brasileira por meio da história e das pessoas
       que a construíram. <br> <br> Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas.
       Para evidenciar a evolução da luta contra o racismo, organizamos algumas dessas histórias em uma linha do tempo
@@ -147,24 +155,24 @@
       <br>No Sankofa, acreditamos que compreender o passado é essencial para transformar o presente e construir um
       futuro mais justo e igualitário.
     </p>
-
   </div>
-
-  <div class="text-center">
+  <!-- botão para o sobre nós-->
+  <div class="text-center mb-36">
     <a href="sobreNos.html"
       class="text-white text-6xl bg-gradient-to-r from-slate-800 via-slate-700 to-gray-500 rounded-4xl w-35 hover:from-slate-900 hover:via-slate-800 hover:to-slate-600 px-9">SAIBA
       MAIS</a>
-    <br><br><br><br><br><br>
   </div>
 
-  <!-- 3. NOVA SEÇÃO COM O CARROSSEL DE BIOGRAFIAS -->
-  <section class="w-[87rem] py-16 mx-auto mb-32 " id="carrosselb">
+  <!-- SEÇÃO COM O CARROSSEL DE BIOGRAFIAS -->
+  <section class="w-[87rem] py-16 mb-28 mx-auto " id="carrosselb">
     <h6 class="text-7xl text-center text-amber-950 mb-24">Biografias em Destaque</h6>
+    <!-- div que organiza o conteudo em um grid com o maximo de items possivel (12) -->
     <div class="grid grid-cols-12 h-full mx-auto">
-
+      <!-- botão de voltar para o card anterior que ocupa um lugar no grid -->
       <button
-        class=" bio-prev  text-amber-950 bg-white rounded-full w-16 h-16  text-4xl my-auto shadow-md hover:bg-gray-100"
+        class=" bio-prev my-auto rounded-full w-16 h-16  text-4xl  shadow-md text-amber-950 bg-white hover:bg-gray-100"
         aria-label="Anterior">&lt;</button>
+      <!-- div com os que ocupa 10 lugar no grid -->
       <div class="col-span-10">
         <div class="swiper biographies-swiper ">
           <div class="swiper-wrapper pb-12">
@@ -268,31 +276,32 @@
           </div>
         </div>
       </div>
-      <!-- Botões de Navegação posicionados sobre os cards (um à esquerda, outro à direita) -->
+      <!-- botão de ir para o proximo card, que ocupa um lugar no grid -->
       <button
         class="bio-next text-amber-950 bg-white rounded-full w-16 h-16  text-4xl my-auto ml-10 shadow-md hover:bg-gray-100"
         aria-label="Próximo">&gt;</button>
 
-
     </div>
   </section>
 
-
-  <div class="px-80 mb-96 mt-20">
+  <!-- frase de impacto -->
+  <div class="px-80 mb-52 mt-20">
     <div class="text-justify text-7xl">
       <h2 class="text-amber-950">
         “Não sou descendente de escravos. Sou descendente de pessoas que foram escravizadas.”
       </h2>
     </div>
-    <div class="text-4xl text-right mt-10">
+    <div class="text-4xl text-right mt-10 text-amber-950">
       <h3>-Makota Valdinha</h3>
     </div>
   </div>
 
-  <footer class="mt-auto w-full bg-amber-950 text-white items-center justify-items-center pt-8">
-    <p class="text-center">"Minha humanidade está ligada à sua, pois só podemos ser humanos juntos."</p>
-    <div class="w-9/12 mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
-      <div class="text-center md:text-left">
+  <!-- rodapé -->
+  <footer class="mt-auto w-[100%] bg-amber-950 text-white items-center justify-items-center pt-8">
+    <p class="text-center text-lg">"Minha humanidade está ligada à sua, pois só podemos ser humanos juntos."</p>
+    <!-- informações de contato -->
+    <div class="w-[70%] mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
+      <div class="text-left">
         <h3 class="font-semibold text-3xl py-2 tracking-wider">FALE CONOSCO</h3>
         <p class="text-xl px-4"> (00) 00000-0000 </p>
         <p class="py-1 text-xl px-4">AAAAAA@gmail.com</p>
@@ -308,7 +317,7 @@
         <p class="py-3 px-4 text-xl">@AAAAAAAA</p>
       </div>
     </div>
-    <p class="text-center pb-4">"© 2025 Grupo 9. Todos os direitos reservados."</p>
+    <p class="text-center pb-4 text-base">"© 2025 Grupo 9. Todos os direitos reservados."</p>
   </footer>
 
 
@@ -316,9 +325,9 @@
   <!-- 4. ADICIONADO SCRIPT DO SWIPER.JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- 5. INICIALIZAÇÃO DOS CARROSSÉIS -->
-
+  <!-- importação do js -->
   <script src="script.js"></script>
+
 </body>
 
 </html>
