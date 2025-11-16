@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 // Em telas >= 768px: mostra 2 slides simultâneos
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                 },
                 // Em telas >= 1024px: mostra 3 slides simultâneos (desktop)
                 1024: {

@@ -69,21 +69,11 @@
       background-color: #F5F5DC
     }
 
-    @media screen and (max-width: 880px){
+    @media screen and (max-width: 900px) {
       h1 {
-      padding: 3%;
-      font-size: 2.5rem;
-      font-weight: 700;  
+        padding: 3%;
+      }
     }
-input#searchinput{
-  width: 20rem;
-  margin-left: 0rem;
-  padding-left: 0rem;
-
-}
-
-    }
-
   </style>
 
   <!-- colocando o favicon (imagem do site) -->
@@ -97,45 +87,45 @@ input#searchinput{
     <div class="flex relative items-center">
       <!-- sankofa do cabeçalho em um link para a pagina inicial -->
       <a href="index.html">
-        <h1 class="text-5xl text-white px-14">San<br class="md:hidden">kofa</h1>
+        <h1 class="md:text-5xl text-3xl text-white pl-14">San<br class="md:hidden">kofa</h1>
       </a>
       <!-- formulario para o usuario inserir a buscar -->
-      <form id="searchForm" class="flex flex-col">
+      <form id="searchForm" class="flex flex-col mr-[6%]">
         <div class="flex items-center">
           <input type="text" id="searchInput" placeholder='Inserir busca'
-            class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-10 bg-contain bg-amber-50 rounded-xl w-[40rem] py-1.5 ml-80" />
+            class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-8 md:pl-10 bg-contain bg-amber-50 rounded-xl w-[13rem] sm:w-[30rem] lg:w-[65rem] py-1.5  ml-[20%] md:ml-[40%] lg:ml-[" />
           <button type="submit"
-            class="text-amber-950 submit font-semibold rounded-lg bg-slate-50 p-1.5 px-2.5 ml-3 hover:bg-slate-200 text-base cursor-pointer">Buscar</button>
+            class="text-amber-950 submit font-semibold rounded-lg bg-slate-50 p-1.5 px-2.5 ml-3 hover:bg-slate-200 text-base cursor-pointer ">Buscar</button>
         </div>
-        <div id="results" class=" bg-white  w-[40rem] px-8 items-start mt-0.5 ml-80"></div>
+        <div id="results" class=" bg-white  lg:w-[40rem] px-8 items-start mt-0.5 ml-80"></div>
       </form>
     </div>
   </header>
   <!-- menu de navegação do desktop -->
   <nav class="font-bold text-amber-950 bg-slate-50 flex justify-around">
-    <a href="index.html" class=" hover:bg-slate-200 text-xl py-2.5">INÍCIO</a>
-    <a href="sobreNos.html" class=" hover:bg-slate-200 text-xl py-2.5">SOBRE NÓS</a>
-    <a href="#" class="hover:bg-slate-200 text-xl py-2.5">BIOGRAFIAS</a>
+    <a href="index.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">INÍCIO</a>
+    <a href="sobreNos.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">SOBRE NÓS</a>
+    <a href="#" class="hover:bg-slate-200 text-lg md:text-xl py-2.5">BIOGRAFIAS</a>
   </nav>
   <!-- conteiner do conteudo principal -->
   <main class="flex-1">
     <!-- CARROSSEL DO BANNER PRINCIPAL: ocupa todo o espaço horizontalmente e 1110 pixels verticalmente-->
-    <div class="swiper main-banner-swiper w-full h-[1110px] shadow-inner">
+    <div class="swiper main-banner-swiper w-full lg:h-[1110px] md:h-[600px] shadow-inner">
       <div class="swiper-wrapper ">
         <!-- Slide 1 -->
         <div class="swiper-slide">
           <img src="img/imgcarrossel.webp" alt="Imagem representativa da cultura afro-brasileira"
-            class="w-full h-full object-cover">
+            class="w-full lg:h-[1110px] md:h-[600px] h-[330px] object-cover">
         </div>
         <!-- Slide 2 (Adicione suas imagens aqui) -->
         <div class="swiper-slide">
           <img src="https://placehold.co/1920x1080/333/FFF?text=Imagem+2" alt="Outra imagem do banner"
-            class="w-full h-full object-cover">
+            class="w-full  lg:h-[1110px] md:h-[600px]  object-cover h-[330px]">
         </div>
         <!-- Slide 3 (Adicione suas imagens aqui) -->
         <div class="swiper-slide">
           <img src="https://placehold.co/1920x1080/555/FFF?text=Imagem+3" alt="Terceira imagem do banner"
-            class="w-full h-full object-cover">
+            class="w-full  lg:h-[1110px] md:h-[600px] h-[330px] object-cover">
         </div>
       </div>
       <!-- Paginação (pontos) -->
@@ -159,8 +149,8 @@ input#searchinput{
   </div>
 
   <!-- introdução do sobre nós  -->
-  <h6 class="text-8xl text-center text-amber-950 py-16 mt-24" id="sobreNos">Nosso Projeto</h6>
-  <div class="text-justify px-72 text-4xl mb-28">
+  <h6 class="md:text-[5.5rem] font-semibold lg:text-8xl lg:font-normal text-5xl text-center text-amber-950 py-16 md:mt-24 " id="sobreNos">Nosso Projeto</h6>
+  <div class="text-justify md:px-[6%] px-[8%] lg:px-72 lg:text-4xl md:text-5xl text-3xl md:mb-28 mb-16">
     <p> Nosso site tem como propósito valorizar e divulgar a cultura afro-brasileira por meio da história e das pessoas
       que a construíram. <br> <br> Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas.
       Para evidenciar a evolução da luta contra o racismo, organizamos algumas dessas histórias em uma linha do tempo
@@ -173,23 +163,23 @@ input#searchinput{
     </p>
   </div>
   <!-- botão para o sobre nós-->
-  <div class="text-center mb-36">
+  <div class="text-center lg:mb-20 md:mb-4 mb-10">
     <a href="sobreNos.html"
-      class="text-white text-6xl bg-gradient-to-r from-slate-800 via-slate-700 to-gray-500 rounded-4xl w-35 hover:from-slate-900 hover:via-slate-800 hover:to-slate-600 px-9">SAIBA
+      class="text-white lg:text-6xl md:text-[4.5rem] text-4xl bg-gradient-to-r from-slate-800 via-slate-700 to-gray-500 rounded-4xl lg:w-32 md:w-56 hover:from-slate-900 hover:via-slate-800 hover:to-slate-600 px-9">SAIBA
       MAIS</a>
   </div>
 
   <!-- SEÇÃO COM O CARROSSEL DE BIOGRAFIAS -->
-  <section class="w-[87rem] py-16 mb-28 mx-auto " id="carrosselb">
-    <h6 class="text-7xl text-center text-amber-950 mb-24">Biografias em Destaque</h6>
+  <section class="lg:w-[87rem] md:w-[100%] py-16 mb-28 mx-auto " id="carrosselb">
+    <h6 class="lg:text-7xl md:text-[4rem] font-semibold lg:font-normal text-center text-amber-950 lg:mb-8 md:mb-8 md:p-[7.5%] text-5xl mb-16">Biografias em Destaque</h6>
     <!-- div que organiza o conteudo em um grid com o maximo de items possivel (12) -->
-    <div class="grid grid-cols-12 h-full mx-auto">
+    <div class="grid grid-cols-12 h-full mx-auto md:w-[95%]">
       <!-- botão de voltar para o card anterior que ocupa um lugar no grid -->
       <button
-        class=" bio-prev my-auto rounded-full w-16 h-16  text-4xl  shadow-md text-amber-950 bg-white hover:bg-gray-100"
+        class=" bio-prev my-auto rounded-full md:w-16 md:h-16 md:ml-0 mx-3 w-13 h-13 text-2xl md:text-4xl  shadow-md text-amber-950 bg-white hover:bg-gray-100"
         aria-label="Anterior">&lt;</button>
       <!-- div com os que ocupa 10 lugar no grid -->
-      <div class="col-span-10">
+      <div class="col-span-10 md:p-[4%] p-[6%] pl-[%]">
         <div class="swiper biographies-swiper ">
           <div class="swiper-wrapper pb-12">
 
@@ -197,10 +187,10 @@ input#searchinput{
             <div class="swiper-slide">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
-                  class="w-full h-64 object-cover">
-                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
-                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Machado de Assis</h3>
-                  <p class="text-gray-700 text-lg flex-1">
+                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Machado de Assis</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
                     Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas
                     que
                     analisavam a sociedade de sua época com ironia e profundidade psicológica.
@@ -213,10 +203,10 @@ input#searchinput{
             <div class="swiper-slide">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)"
-                  alt="Foto de Carolina Maria de Jesus" class="w-full h-64 object-cover">
-                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
-                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Carolina Maria de Jesus</h3>
-                  <p class="text-gray-700 text-lg flex-1">
+                  alt="Foto de Carolina Maria de Jesus" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Carolina Maria de Jesus</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
                     Escritora, compositora e poetisa, sua obra "Quarto de Despejo: Diário de uma Favelada" retrata a
                     dura
                     realidade da vida na favela do Canindé, em São Paulo.
@@ -229,10 +219,10 @@ input#searchinput{
             <div class="swiper-slide h-3/6">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
-                  class="w-full h-64 object-cover">
-                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
-                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Abdias do Nascimento</h3>
-                  <p class="text-gray-700 text-lg flex-1">
+                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Abdias do Nascimento</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
                     Ator, poeta, escritor, dramaturgo e ativista dos direitos civis e humanos das populações negras. Foi
                     uma
                     figura central na luta contra o racismo e pela valorização da cultura afro-brasileira.
@@ -246,10 +236,10 @@ input#searchinput{
             <div class="swiper-slide h-3/6">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
-                  class="w-full h-64 object-cover">
-                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
-                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Machado de Assis</h3>
-                  <p class="text-gray-700 text-lg flex-1">
+                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Machado de Assis</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
                     Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas
                     que
                     analisavam a sociedade de sua época com ironia e profundidade psicológica.
@@ -262,10 +252,10 @@ input#searchinput{
             <div class="swiper-slide h-3/6">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)"
-                  alt="Foto de Carolina Maria de Jesus" class="w-full h-64 object-cover">
-                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
-                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Carolina Maria de Jesus</h3>
-                  <p class="text-gray-700 text-lg flex-1">
+                  alt="Foto de Carolina Maria de Jesus" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Carolina Maria de Jesus</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
                     Escritora, compositora e poetisa, sua obra "Quarto de Despejo: Diário de uma Favelada" retrata a
                     dura
                     realidade da vida na favela do Canindé, em São Paulo.
@@ -278,10 +268,10 @@ input#searchinput{
             <div class="swiper-slide h-3/6">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full ">
                 <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
-                  class="w-full h-64 object-cover">
-                <div class="p-6 flex flex-col flex-1 min-h-72 max-h-72">
-                  <h3 class="text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Abdias do Nascimento</h3>
-                  <p class="text-gray-700 text-lg flex-1">
+                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Abdias do Nascimento</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
                     Ator, poeta, escritor, dramaturgo e ativista dos direitos civis e humanos das populações negras. Foi
                     uma
                     figura central na luta contra o racismo e pela valorização da cultura afro-brasileira.
@@ -294,29 +284,29 @@ input#searchinput{
       </div>
       <!-- botão de ir para o proximo card, que ocupa um lugar no grid -->
       <button
-        class="bio-next text-amber-950 bg-white rounded-full w-16 h-16  text-4xl my-auto ml-10 shadow-md hover:bg-gray-100"
+        class="bio-next text-amber-950 bg-white rounded-full md:w-16 md:h-16 -ml-5 w-13 h-13 text-2xl md:text-4xl my-auto  shadow-md hover:bg-gray-100 "
         aria-label="Próximo">&gt;</button>
 
     </div>
   </section>
 
   <!-- frase de impacto -->
-  <div class="px-80 mb-52 mt-20">
-    <div class="text-justify text-7xl">
+  <div class="lg:px-80 md:px-[8%] mb-52 mt-20 md:block px-[10%]">
+    <div class="text-center text-7xl">
       <h2 class="text-amber-950">
         “Não sou descendente de escravos. Sou descendente de pessoas que foram escravizadas.”
       </h2>
     </div>
-    <div class="text-4xl text-right mt-10 text-amber-950">
+    <div class="md:text-4xl text-3xl text-right mt-10 text-amber-950">
       <h3>-Makota Valdinha</h3>
     </div>
   </div>
 
   <!-- rodapé -->
   <footer class="mt-auto w-[100%] bg-amber-950 text-white items-center justify-items-center pt-8">
-    <p class="text-center text-lg">"Minha humanidade está ligada à sua, pois só podemos ser humanos juntos."</p>
+    <p class="text-center lg:text-lg md:text-xl">"Minha humanidade está ligada à sua, pois só podemos ser humanos juntos."</p>
     <!-- informações de contato -->
-    <div class="w-[70%] mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
+    <div class="lg:w-[70%] md:w-[90%] mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
       <div class="text-left">
         <h3 class="font-semibold text-3xl py-2 tracking-wider">FALE CONOSCO</h3>
         <p class="text-xl px-4"> (00) 00000-0000 </p>
@@ -333,7 +323,7 @@ input#searchinput{
         <p class="py-3 px-4 text-xl">@AAAAAAAA</p>
       </div>
     </div>
-    <p class="text-center pb-4 text-base">"© 2025 Grupo 9. Todos os direitos reservados."</p>
+    <p class="text-center pb-4 lg:text-base md:text-lg">"© 2025 Grupo 9. Todos os direitos reservados."</p>
   </footer>
 
 
