@@ -69,40 +69,81 @@
       background-color: #F5F5DC
     }
 
+    /* responsivo */
     @media screen and (max-width: 900px) {
       h1 {
         padding: 3%;
       }
     }
+
+    /* menu */
+    .menu-mobile {
+      width: 55%;
+      height: 100% ;
+      position: fixed;
+      z-index: 99999;
+      left: 45%;
+    }
+    .nav-mobile {
+      flex-direction: column;
+      gap: 3rem;
+      text-align: right;
+      margin-top: 6rem;
+      padding: 3rem;
+      font-size: 1.5rem;
+    }
+
+    .btn-fechar{
+      margin-top: 3rem;
+      margin-left: 3rem;
+    }
+
+    @media (max-width: 640px) {
+.nav-mobile {
+  font-size: 1rem;
+}
+    }
+
   </style>
 
   <!-- colocando o favicon (imagem do site) -->
   <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
 </head>
 
-<body>
+<body> 
+  <div class="menu-mobile bg-amber-950 hidden" id="menu-mobile">
+        <button class="btn-fechar"><img src="img/close_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="" class="img w-10"></button>
+        <nav class="font-bold text-white links-mobile flex nav-mobile">
+          <a href="index.html" class=" hover:bg-slate-200 py-2.5">INÍCIO</a>
+          <a href="sobreNos.html" class=" hover:bg-slate-200 py-2.5">SOBRE NÓS</a>
+          <a href="#" class="hover:bg-slate-200 py-2.5">BIOGRAFIAS</a>
+        </nav>
+    </div>
   <!-- cabeçalho: itens organizados um do lado do outro com flex -->
-  <header class="flex flex-row bg-amber-950 justify-between items-center px-10 min-h-40">
+  <header class="flex flex-row bg-amber-950 justify-between items-center md:px-10 sm:px-7 px-4 min-h-40">
     <!-- div para conseguir centralizar o sankofa e separar ele da barra de pesquisa -->
     <div class="flex relative items-center">
       <!-- sankofa do cabeçalho em um link para a pagina inicial -->
       <a href="index.html">
-        <h1 class="md:text-5xl text-3xl text-white pl-14">San<br class="md:hidden">kofa</h1>
+        <h1 class="md:text-5xl text-2xl md:font-normal text-white md:pl-14">San<br class="md:hidden">kofa</h1>
       </a>
       <!-- formulario para o usuario inserir a buscar -->
-      <form id="searchForm" class="flex flex-col mr-[6%]">
+      <form id="searchForm" class="flex flex-col">
         <div class="flex items-center">
           <input type="text" id="searchInput" placeholder='Inserir busca'
-            class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-8 md:pl-10 bg-contain bg-amber-50 rounded-xl w-[13rem] sm:w-[30rem] lg:w-[65rem] py-1.5  ml-[20%] md:ml-[40%] lg:ml-[" />
+            class="md:bg-[url('img/lipa.png')] md:bg-no-repeat md:bg-right pl-6 md:pl-10 bg-contain bg-amber-50 rounded-xl w-[8rem] md:w-[30rem] lg:w-[65rem] md:py-1.5 py-0.5  ml-[20%] md:ml-[40%]" />
           <button type="submit"
-            class="text-amber-950 submit font-semibold rounded-lg bg-slate-50 p-1.5 px-2.5 ml-3 hover:bg-slate-200 text-base cursor-pointer ">Buscar</button>
+            class="text-amber-950 submit font-semibold rounded-lg bg-slate-50 md:p-1.5 p-0.5 md:px-2.5 px-1.5 md:ml-3 ml-1.5 hover:bg-slate-200 md:text-base text-sm cursor-pointer ">Buscar</button>
         </div>
-        <div id="results" class=" bg-white  lg:w-[40rem] px-8 items-start mt-0.5 ml-80"></div>
+        <div id="results" class=" bg-white  w-[10rem] md:w-[30rem] lg:w-[65rem] ml-[10%] md:ml-[40%]"></div>
       </form>
-    </div>
+  </div>
+   
+      <div class=""><img src="img/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="" class="size-10 ml-3 md:hidden" id="btn-menu"></div>
+    
   </header>
   <!-- menu de navegação do desktop -->
-  <nav class="font-bold text-amber-950 bg-slate-50 flex justify-around">
+  <nav class="font-bold text-amber-950 bg-slate-50  justify-around md:flex hidden">
     <a href="index.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">INÍCIO</a>
     <a href="sobreNos.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">SOBRE NÓS</a>
     <a href="#" class="hover:bg-slate-200 text-lg md:text-xl py-2.5">BIOGRAFIAS</a>
@@ -149,7 +190,9 @@
   </div>
 
   <!-- introdução do sobre nós  -->
-  <h6 class="md:text-[5.5rem] font-semibold lg:text-8xl lg:font-normal text-5xl text-center text-amber-950 py-16 md:mt-24 " id="sobreNos">Nosso Projeto</h6>
+  <h6
+    class="md:text-[5.5rem] font-semibold lg:text-8xl lg:font-normal text-4xl text-center text-amber-950 py-16 md:mt-24 "
+    id="sobreNos">Nosso Projeto</h6>
   <div class="text-justify md:px-[6%] px-[8%] lg:px-72 lg:text-4xl md:text-5xl text-3xl md:mb-28 mb-16">
     <p> Nosso site tem como propósito valorizar e divulgar a cultura afro-brasileira por meio da história e das pessoas
       que a construíram. <br> <br> Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas.
@@ -171,7 +214,9 @@
 
   <!-- SEÇÃO COM O CARROSSEL DE BIOGRAFIAS -->
   <section class="lg:w-[87rem] md:w-[100%] py-16 mb-28 mx-auto " id="carrosselb">
-    <h6 class="lg:text-7xl md:text-[4rem] font-semibold lg:font-normal text-center text-amber-950 lg:mb-8 md:mb-8 md:p-[7.5%] text-5xl mb-16">Biografias em Destaque</h6>
+    <h6
+      class="lg:text-7xl md:text-[4rem] font-semibold lg:font-normal text-center text-amber-950 lg:mb-8 md:mb-8 md:p-[7.5%] text-5xl mb-16">
+      Biografias em Destaque</h6>
     <!-- div que organiza o conteudo em um grid com o maximo de items possivel (12) -->
     <div class="grid grid-cols-12 h-full mx-auto md:w-[95%]">
       <!-- botão de voltar para o card anterior que ocupa um lugar no grid -->
@@ -188,9 +233,11 @@
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
                   class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
-                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
-                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Machado de Assis</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
+                <div
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
+                    Machado de Assis</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
                     Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas
                     que
                     analisavam a sociedade de sua época com ironia e profundidade psicológica.
@@ -204,9 +251,11 @@
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)"
                   alt="Foto de Carolina Maria de Jesus" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
-                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
-                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Carolina Maria de Jesus</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
+                <div
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
+                    Carolina Maria de Jesus</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
                     Escritora, compositora e poetisa, sua obra "Quarto de Despejo: Diário de uma Favelada" retrata a
                     dura
                     realidade da vida na favela do Canindé, em São Paulo.
@@ -220,9 +269,11 @@
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
                   class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
-                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
-                  <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Abdias do Nascimento</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
+                <div
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
+                    Abdias do Nascimento</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
                     Ator, poeta, escritor, dramaturgo e ativista dos direitos civis e humanos das populações negras. Foi
                     uma
                     figura central na luta contra o racismo e pela valorização da cultura afro-brasileira.
@@ -237,9 +288,11 @@
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
                   class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
-                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
-                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Machado de Assis</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
+                <div
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
+                    Machado de Assis</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
                     Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas
                     que
                     analisavam a sociedade de sua época com ironia e profundidade psicológica.
@@ -253,9 +306,11 @@
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)"
                   alt="Foto de Carolina Maria de Jesus" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
-                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
-                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Carolina Maria de Jesus</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
+                <div
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
+                    Carolina Maria de Jesus</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
                     Escritora, compositora e poetisa, sua obra "Quarto de Despejo: Diário de uma Favelada" retrata a
                     dura
                     realidade da vida na favela do Canindé, em São Paulo.
@@ -269,9 +324,11 @@
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full ">
                 <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
                   class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
-                <div class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
-                  <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">Abdias do Nascimento</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-2xl flex-1">
+                <div
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
+                    Abdias do Nascimento</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
                     Ator, poeta, escritor, dramaturgo e ativista dos direitos civis e humanos das populações negras. Foi
                     uma
                     figura central na luta contra o racismo e pela valorização da cultura afro-brasileira.
@@ -291,8 +348,8 @@
   </section>
 
   <!-- frase de impacto -->
-  <div class="lg:px-80 md:px-[8%] mb-52 mt-20 md:block px-[10%]">
-    <div class="text-center text-7xl">
+  <div class="lg:px-80 md:px-[8%] mb-52 mt-20 md:block px-[4%] max-w-[85%] mx-auto">
+    <div class="text-center md:text-7xl text-5xl">
       <h2 class="text-amber-950">
         “Não sou descendente de escravos. Sou descendente de pessoas que foram escravizadas.”
       </h2>
@@ -304,9 +361,11 @@
 
   <!-- rodapé -->
   <footer class="mt-auto w-[100%] bg-amber-950 text-white items-center justify-items-center pt-8">
-    <p class="text-center lg:text-lg md:text-xl">"Minha humanidade está ligada à sua, pois só podemos ser humanos juntos."</p>
+    <p class="text-center lg:text-lg md:text-xl">"Minha humanidade está ligada à sua, pois só podemos ser humanos
+      juntos."</p>
     <!-- informações de contato -->
-    <div class="lg:w-[70%] md:w-[90%] mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
+    <div
+      class="lg:w-[70%] md:w-[90%] mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
       <div class="text-left">
         <h3 class="font-semibold text-3xl py-2 tracking-wider">FALE CONOSCO</h3>
         <p class="text-xl px-4"> (00) 00000-0000 </p>

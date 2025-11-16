@@ -255,3 +255,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn('Swiper não foi carregado. Certifique-se de incluir o script do Swiper.');
     }
 });
+
+let menu= document.getElementById('menu-mobile')
+let btnMenu = document.getElementById('btn-menu')
+let btnFechar = document.getElementById('btn-fechar')
+btnMenu.addEventListener('click', () => {
+    menu.classList.remove('hidden')
+})
+
+menu.addEventListener('click', () => {
+    window.location.reload()
+})
