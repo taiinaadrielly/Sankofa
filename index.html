@@ -68,6 +68,22 @@
     body {
       background-color: #F5F5DC
     }
+
+    @media screen and (max-width: 880px){
+      h1 {
+      padding: 3%;
+      font-size: 2.5rem;
+      font-weight: 700;  
+    }
+input#searchinput{
+  width: 20rem;
+  margin-left: 0rem;
+  padding-left: 0rem;
+
+}
+
+    }
+
   </style>
 
   <!-- colocando o favicon (imagem do site) -->
@@ -81,7 +97,7 @@
     <div class="flex relative items-center">
       <!-- sankofa do cabeçalho em um link para a pagina inicial -->
       <a href="index.html">
-        <h1 class="text-5xl text-white px-16">Sankofa</h1>
+        <h1 class="text-5xl text-white px-14">San<br class="md:hidden">kofa</h1>
       </a>
       <!-- formulario para o usuario inserir a buscar -->
       <form id="searchForm" class="flex flex-col">
@@ -89,9 +105,9 @@
           <input type="text" id="searchInput" placeholder='Inserir busca'
             class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-10 bg-contain bg-amber-50 rounded-xl w-[40rem] py-1.5 ml-80" />
           <button type="submit"
-            class="text-amber-950 font-semibold rounded-lg bg-slate-50 p-1.5 px-2.5 ml-3 hover:bg-slate-200 text-base cursor-pointer">Buscar</button>
+            class="text-amber-950 submit font-semibold rounded-lg bg-slate-50 p-1.5 px-2.5 ml-3 hover:bg-slate-200 text-base cursor-pointer">Buscar</button>
         </div>
-        <div id="results" class="bg-white w-[40rem] px-8 items-start mt-0.5 ml-80"></div>
+        <div id="results" class=" bg-white  w-[40rem] px-8 items-start mt-0.5 ml-80"></div>
       </form>
     </div>
   </header>
