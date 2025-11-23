@@ -98,11 +98,101 @@
       margin-left: 3rem;
     }
 
+    .overlay-menu {
+      background-color: rgba(0, 0, 0, 0.726);
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 8888;
+    }
+
     @media (max-width: 640px) {
 .nav-mobile {
   font-size: 1rem;
 }
     }
+
+       @media screen and (max-width: 885px) {
+        .frase{
+            text-align: center;
+            font-size: 4.8rem;
+        }
+        .bio-prev{
+          margin-left: 28px;
+        }
+       }
+
+          @media screen and (max-width: 840px) {
+        .bio-prev{
+          margin-left: 22px;
+        }
+       }
+            @media screen and (max-width: 802px) {
+        header{
+          padding: 3rem;
+        }
+        .search{
+          margin-left: 35% ;
+          width: 27rem ;
+        }
+          .frase{
+            text-align: center;
+            font-size: 4.7rem;
+        } }
+
+         @media screen and (max-width: 780px) {
+        .frase{
+            text-align: center;
+            font-size: 4.5rem;
+        }  .search{
+          margin-left: 22% ;
+           width: 24rem ;
+       
+        }}
+
+         @media screen and (max-width: 500px) {
+          header{
+          padding: 2rem;
+        }
+          .search{
+          margin-left: 22% ;
+           width: 8rem ;
+       }
+       .img{
+        display: none;
+       }
+       .frase{
+            text-align: center;
+            font-size: 3rem;
+            padding: 4%;
+        } 
+      }
+
+       @media screen and (max-width: 400px) {
+          header{
+          padding: 2rem;
+        }
+          .search{
+        display: none;
+       }
+       .searchh {
+          margin-left: 18% ;
+           width: 6.5rem ;
+       }
+       .img{
+        display: none;
+       }
+       .frase{
+            text-align: center;
+            font-size: 3rem;
+            padding: 4%;
+        } 
+      }
+      
+    
+      
 
   </style>
 
@@ -131,17 +221,20 @@
       <form id="searchForm" class="flex flex-col">
         <div class="flex items-center">
           <input type="text" id="searchInput" placeholder='Inserir busca'
-            class="md:bg-[url('img/lipa.png')] md:bg-no-repeat md:bg-right pl-6 md:pl-10 bg-contain bg-amber-50 rounded-xl w-[8rem] md:w-[30rem] lg:w-[65rem] md:py-1.5 py-0.5  ml-[20%] md:ml-[40%]" />
+            class="md:bg-[url('img/lipa.png')] md:bg-no-repeat md:bg-right pl-6 md:pl-10 bg-contain bg-amber-50 rounded-xl w-[8rem] md:w-[30rem] lg:w-[65rem] md:py-1.5 py-0.5  ml-[10%] md:ml-[40%] search" />
+            <input type="text" id="searchInput" placeholder='Buscar'
+            class="md:bg-[url('img/lipa.png')] md:bg-no-repeat md:bg-right pl-6 md:pl-10 bg-contain bg-amber-50 rounded-xl w-[8rem] md:w-[30rem] lg:w-[65rem] md:py-1.5 py-0.5  ml-[10%] md:ml-[40%] searchh" />
           <button type="submit"
             class="text-amber-950 submit font-semibold rounded-lg bg-slate-50 md:p-1.5 p-0.5 md:px-2.5 px-1.5 md:ml-3 ml-1.5 hover:bg-slate-200 md:text-base text-sm cursor-pointer ">Buscar</button>
         </div>
-        <div id="results" class=" bg-white  w-[10rem] md:w-[30rem] lg:w-[65rem] ml-[10%] md:ml-[40%]"></div>
+        <div id="results" class=" bg-white  w-[8rem] md:w-[16rem] lg:w-[65rem]  ml-[20%] md:ml-[40%]"></div>
       </form>
   </div>
    
       <div class=""><img src="img/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="" class="size-10 ml-3 md:hidden" id="btn-menu"></div>
     
   </header>
+  <div class="overlay-menu hidden"></div>
   <!-- menu de navegação do desktop -->
   <nav class="font-bold text-amber-950 bg-slate-50  justify-around md:flex hidden">
     <a href="index.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">INÍCIO</a>
@@ -160,12 +253,12 @@
         </div>
         <!-- Slide 2 (Adicione suas imagens aqui) -->
         <div class="swiper-slide">
-          <img src="https://placehold.co/1920x1080/333/FFF?text=Imagem+2" alt="Outra imagem do banner"
+          <img src="img/Voodoo_Altar_New_Orleans.jpg" alt="Outra imagem do banner"
             class="w-full  lg:h-[1110px] md:h-[600px]  object-cover h-[330px]">
         </div>
         <!-- Slide 3 (Adicione suas imagens aqui) -->
         <div class="swiper-slide">
-          <img src="https://placehold.co/1920x1080/555/FFF?text=Imagem+3" alt="Terceira imagem do banner"
+          <img src="img/27_anos_da_Fundação_Cultural_Palmares.jpg" alt="Terceira imagem do banner"
             class="w-full  lg:h-[1110px] md:h-[600px] h-[330px] object-cover">
         </div>
       </div>
@@ -198,9 +291,6 @@
       que a construíram. <br> <br> Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas.
       Para evidenciar a evolução da luta contra o racismo, organizamos algumas dessas histórias em uma linha do tempo
       que conecta pessoas com profissões semelhantes, destacando avanços, desafios e conquistas ao longo dos anos. <br>
-      <br>Sankofa é um conceito e símbolo da cultura africana Adinkra que representa a sabedoria de retornar ao passado
-      para aprender com ele e, assim, construir um futuro melhor. Inspirados por esse significado, buscamos resgatar
-      trajetórias que ajudaram a moldar a identidade negra no Brasil e que continuam a inspirar novas gerações.<br>
       <br>No Sankofa, acreditamos que compreender o passado é essencial para transformar o presente e construir um
       futuro mais justo e igualitário.
     </p>
@@ -215,16 +305,16 @@
   <!-- SEÇÃO COM O CARROSSEL DE BIOGRAFIAS -->
   <section class="lg:w-[87rem] md:w-[100%] py-16 mb-28 mx-auto " id="carrosselb">
     <h6
-      class="lg:text-7xl md:text-[4rem] font-semibold lg:font-normal text-center text-amber-950 lg:mb-8 md:mb-8 md:p-[7.5%] text-5xl mb-16">
+      class="lg:text-7xl md:text-[4rem] font-semibold lg:font-normal text-center text-amber-950 lg:mb-1.5 md:mb-8 md:p-[7.5%] text-5xl mb-16">
       Biografias em Destaque</h6>
     <!-- div que organiza o conteudo em um grid com o maximo de items possivel (12) -->
-    <div class="grid grid-cols-12 h-full mx-auto md:w-[95%]">
+    <div class="grid grid-cols-12 h-full md:w-[95%] mx-auto">
       <!-- botão de voltar para o card anterior que ocupa um lugar no grid -->
       <button
-        class=" bio-prev my-auto rounded-full md:w-16 md:h-16 md:ml-0 mx-3 w-13 h-13 text-2xl md:text-4xl  shadow-md text-amber-950 bg-white hover:bg-gray-100"
-        aria-label="Anterior">&lt;</button>
+        class=" bio-prev my-auto rounded-full md:w-16 md:h-16 md:ml-16 mx-3 w-13 h-13 text-2xl md:text-4xl  shadow-md bg-white hover:bg-gray-100"
+        aria-label="Anterior"><img src="img/chevron_left_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="" class="mx-auto w-10"></button>
       <!-- div com os que ocupa 10 lugar no grid -->
-      <div class="col-span-10 md:p-[4%] p-[6%] pl-[%]">
+      <div class="col-span-10 md:p-[4%] p-[6%]  ">
         <div class="swiper biographies-swiper ">
           <div class="swiper-wrapper pb-12">
 
@@ -232,15 +322,14 @@
             <div class="swiper-slide">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
-                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Machado de Assis</h3>
                   <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
                     Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas
-                    que
-                    analisavam a sociedade de sua época com ironia e profundidade psicológica.
+                    que analisavam a sociedade de sua época com ironia e profundidade psicológica.
                   </p>
                 </div>
               </div>
@@ -250,7 +339,7 @@
             <div class="swiper-slide">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)"
-                  alt="Foto de Carolina Maria de Jesus" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                  alt="Foto de Carolina Maria de Jesus" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
@@ -268,7 +357,7 @@
             <div class="swiper-slide h-3/6">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
-                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
                   <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
@@ -287,7 +376,7 @@
             <div class="swiper-slide h-3/6">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
-                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
@@ -305,7 +394,7 @@
             <div class="swiper-slide h-3/6">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)"
-                  alt="Foto de Carolina Maria de Jesus" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                  alt="Foto de Carolina Maria de Jesus" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
@@ -323,7 +412,7 @@
             <div class="swiper-slide h-3/6">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full ">
                 <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
-                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover">
+                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
                   <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
@@ -341,15 +430,15 @@
       </div>
       <!-- botão de ir para o proximo card, que ocupa um lugar no grid -->
       <button
-        class="bio-next text-amber-950 bg-white rounded-full md:w-16 md:h-16 -ml-5 w-13 h-13 text-2xl md:text-4xl my-auto  shadow-md hover:bg-gray-100 "
-        aria-label="Próximo">&gt;</button>
+        class="bio-next  bg-white rounded-full md:w-16 md:h-16 -ml-5 w-13 h-13 text-2xl md:text-4xl my-auto   shadow-md hover:bg-gray-100 "
+        aria-label="Próximo"><img src="img/chevron_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="" class="mx-auto w-10"></button>
 
     </div>
   </section>
 
   <!-- frase de impacto -->
-  <div class="lg:px-80 md:px-[8%] mb-52 mt-20 md:block px-[4%] max-w-[85%] mx-auto">
-    <div class="text-center md:text-7xl text-5xl">
+  <div class="lg:px-64 md:px-[8%] mb-52 mt-20 md:block px-[4%] max-w-[100%] mx-auto">
+    <div class=" text-center md:text-7xl/normal text-5xl frase">
       <h2 class="text-amber-950">
         “Não sou descendente de escravos. Sou descendente de pessoas que foram escravizadas.”
       </h2>

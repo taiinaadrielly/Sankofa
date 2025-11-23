@@ -258,9 +258,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let menu= document.getElementById('menu-mobile')
 let btnMenu = document.getElementById('btn-menu')
+let overlayMenu = document.querySelector('.overlay-menu')
 let btnFechar = document.getElementById('btn-fechar')
 btnMenu.addEventListener('click', () => {
     menu.classList.remove('hidden')
+})
+
+btnMenu.addEventListener('click', () => {
+    overlayMenu.classList.remove('hidden')
 })
 
 menu.addEventListener('click', () => {
