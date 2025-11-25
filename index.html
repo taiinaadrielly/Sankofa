@@ -115,6 +115,53 @@
       }
     }
 
+    @media screen and (min-width: 1825px) {
+      .search {
+        margin-right: 0;
+        margin-left: 40%;
+        width:60rem;
+         z-index: 300;
+      
+     
+      } 
+      .input{
+        padding-bottom:  10px;
+        padding-top: 10px;
+      } 
+      .textinho {
+        font-size: 3.5rem;
+      }
+      h1 {
+        font-size: 4.5rem;
+      }
+      header {
+        padding-bottom:  4rem;
+        padding-top: 4rem;
+      }
+      h6 {
+        font-size: 7.5rem;
+      }
+      .carrosselb {
+        width: 94%;
+        height:100%;
+      }
+        .carrosselb p {
+       font-size: 1.452rem;
+      }
+       .carrosselb h2, h3 , h4 {
+       font-size: 2.10rem;
+      }
+      .frase{
+        font-size: 5rem;
+      }
+      .navv a{
+        font-size: 1.8rem;
+      }
+      footer p{
+        font-size: 1.6rem;
+      }
+    }
+
     @media screen and (max-width: 885px) {
       .frase {
         text-align: center;
@@ -331,16 +378,14 @@
         <h1 class="md:text-5xl text-2xl md:font-normal text-white md:pl-14">San<br class="md:hidden">kofa</h1>
       </a>
       <!-- formulario para o usuario inserir a buscar -->
-      <form id="searchForm" class="flex flex-col">
-        <div class="flex items-center">
-
-
+      <form id="searchForm" class="flex flex-col ">
+        <div class="flex">
           <input type="text" id="searchInput" placeholder='Buscar'
-            class="md:bg-[url('img/lipa.png')] md:bg-no-repeat md:bg-right pl-6 md:pl-10 bg-contain bg-amber-50 rounded-xl w-[8rem] md:w-[30rem] lg:w-[65rem] md:py-1.5 py-0.5  ml-[10%] md:ml-[40%] search" />
+            class="md:bg-[url('img/lipa.png')] md:bg-no-repeat md:bg-right pl-6 md:pl-10 bg-contain bg-amber-50 rounded-xl md:py-1.5 py-0.5 search input" />
           <button type="submit"
-            class="text-amber-950 submit font-semibold rounded-lg bg-slate-50 md:p-1.5 p-0.5 md:px-2.5 px-1.5 md:ml-3 ml-1.5 hover:bg-slate-200 md:text-base text-sm cursor-pointer ">Buscar</button>
+            class="text-amber-950 submit divv font-semibold rounded-lg bg-slate-50 md:p-1.5 p-0.5 md:px-2.5 px-1.5 md:ml-3 ml-1.5 hover:bg-slate-200 md:text-base text-sm cursor-pointer ">Buscar</button>
         </div>
-        <div id="results" class=" bg-white  w-[8rem] md:w-[16rem] lg:w-[65rem]  ml-[20%] md:ml-[40%]"></div>
+        <div id="results" class=" bg-white search"></div>
       </form>
     </div>
 
@@ -350,7 +395,7 @@
   </header>
   <div class="overlay-menu hidden"></div>
   <!-- menu de navegação do desktop -->
-  <nav class="font-bold text-amber-950 bg-slate-50  justify-around md:flex hidden">
+  <nav class="font-bold text-amber-950 bg-slate-50  justify-around md:flex hidden navv">
     <a href="index.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">INÍCIO</a>
     <a href="sobreNos.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">SOBRE NÓS</a>
     <a href="#" class="hover:bg-slate-200 text-lg md:text-xl py-2.5">BIOGRAFIAS</a>
@@ -400,7 +445,7 @@
   <h6
     class="md:text-[5.5rem] font-semibold lg:text-8xl lg:font-normal text-4xl text-center text-amber-950 py-16 md:mt-24 "
     id="sobreNos">Nosso Projeto</h6>
-  <div class="text-justify md:px-[6%] px-[8%] lg:px-72 lg:text-4xl md:text-5xl text-3xl md:mb-28 mb-16">
+  <div class="text-justify md:px-[6%] px-[8%] lg:px-72 lg:text-4xl md:text-5xl text-3xl md:mb-28 mb-16 textinho">
     <p> Nosso site tem como propósito valorizar e divulgar a cultura afro-brasileira por meio da história e das pessoas
       que a construíram. <br> <br> Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas.
       Para evidenciar a evolução da luta contra o racismo, organizamos algumas dessas histórias em uma linha do tempo
@@ -417,7 +462,7 @@
   </div>
 
   <!-- SEÇÃO COM O CARROSSEL DE BIOGRAFIAS -->
-  <section class="lg:w-[87rem] md:w-[100%] py-16 mb-28 mx-auto " id="carrosselb">
+  <section class="lg:w-[87rem] md:w-[100%] py-16 mb-28 mx-auto carrosselb " id="carrosselb">
     <h6
       class="lg:text-7xl md:text-[4rem] font-semibold lg:font-normal text-center text-amber-950 lg:mb-1.5 md:mb-8 md:p-[7.5%] text-5xl mb-16">
       Biografias em Destaque</h6>
@@ -443,7 +488,7 @@
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Machado de Assis</h3>
                   <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
-                    Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas
+                    Considerado por muitos o maior nome da literatura brasileira, escreveu textos,
                     que analisavam a sociedade de sua época com ironia e profundidade psicológica.
                   </p>
                 </div>
@@ -497,7 +542,7 @@
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Machado de Assis</h3>
                   <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
-                    Considerado por muitos o maior nome da literatura brasileira, escreveu romances, contos e crônicas
+                    Considerado por muitos o maior nome da literatura brasileira, escreveu texto,
                     que
                     analisavam a sociedade de sua época com ironia e profundidade psicológica.
                   </p>
