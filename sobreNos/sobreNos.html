@@ -7,90 +7,64 @@
   <title>Sankofa</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+  <!--fontes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Tenor+Sans&display=swap"
     rel="stylesheet">
 
-  <!-- 1. ADICIONADO CSS DO SWIPER.JS -->
+  <!-- 1. ADICIONADO CSS DO SWIPER.JS (biblioteca css) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <style>
-    /* Suas fontes e estilos permanecem aqui */
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Tenor+Sans&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  <link rel="stylesheet" href="style.css">
 
-    a {
-      font-family: "Montserrat", serif;
-    }
-
-    h1 {
-      font-family: "Tenor Sans", sans-serif;
-      font-style: normal;
-    }
-
-    h2 {
-      font-family: "Pinyon Script", cursive;
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    /* Estilos para as setas de navegação do Swiper */
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #ffffff;
-      /* Cor branca para as setas */
-      background-color: rgba(0, 0, 0, 0.3);
-      /* Fundo semitransparente */
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-    }
-
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      font-size: 24px;
-      /* Tamanho do ícone da seta */
-    }
-    
-    body{
-      background-color:#F5F5DC
-    }
-  </style>
-
+  <!-- colocando o favicon (imagem do site) -->
   <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
 </head>
 
-<body class=" w-full min-h-screen flex flex-col">
-
-  <header class="flex flex-row bg-amber-950 justify-between items-center px-10 min-h-40">
+<body>
+  <div class="menu-mobile bg-amber-950 hidden" id="menu-mobile">
+    <button class="btn-fechar"><img src="img/close_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""
+        class="img w-10"></button>
+    <nav class="font-bold text-white links-mobile flex nav-mobile">
+      <a href="/index.html" class=" hover:bg-slate-200 py-2.5">INÍCIO</a>
+      <a href="sobreNos.html" class=" hover:bg-slate-200 py-2.5">SOBRE NÓS</a>
+      <a href="#" class="hover:bg-slate-200 py-2.5">BIOGRAFIAS</a>
+    </nav>
+  </div>
+  <!-- cabeçalho: itens organizados um do lado do outro com flex -->
+  <header class="flex flex-row bg-amber-950 justify-between items-center md:px-10 sm:px-7 px-4 min-h-40">
+    <!-- div para conseguir centralizar o sankofa e separar ele da barra de pesquisa -->
     <div class="flex relative items-center">
-      <a href="index.html">
-        <h1 class="text-5xl text-white px-16">Sankofa</h1>
+      <!-- sankofa do cabeçalho em um link para a pagina inicial -->
+      <a href="/index.html">
+        <h1 class="md:text-5xl text-2xl md:font-normal text-white md:pl-14">San<br class="md:hidden">kofa</h1>
       </a>
-      <form id="searchForm" class="flex flex-col">
-        <div class="flex items-center">
-          <input type="text" id="searchInput" placeholder='Inserir busca'
-            class="bg-[url('img/lipa.png')] bg-no-repeat bg-right pl-10 bg-contain bg-amber-50 rounded-xl w-[40rem] py-1.5 ml-80" />
+      <!-- formulario para o usuario inserir a buscar -->
+      <form id="searchForm" class="flex flex-col ">
+        <div class="flex">
+          <input type="text" id="searchInput" placeholder='Buscar'
+            class="md:bg-[url('img/lipa.png')] md:bg-no-repeat md:bg-right pl-6 md:pl-10 bg-contain bg-amber-50 rounded-xl md:py-1.5 py-0.5 search input" />
           <button type="submit"
-            class="text-amber-950 font-semibold rounded-lg bg-slate-50 p-1.5 px-2.5 ml-3 hover:bg-slate-200 text-base cursor-pointer">Buscar</button>
+            class="text-amber-950 submit divv font-semibold rounded-lg bg-slate-50 md:p-1.5 p-0.5 md:px-2.5 px-1.5 md:ml-3 ml-1.5 hover:bg-slate-200 md:text-base text-sm cursor-pointer ">Buscar</button>
         </div>
-        <div id="results" class="bg-white w-[40rem] px-8 items-start mt-0.5 ml-80"></div>
+        <div id="results" class=" bg-white search"></div>
       </form>
     </div>
 
-  
+    <div class=""><img src="/img/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""
+        class="size-10 md:hidden btnn" id="btn-menu"></div>
+
   </header>
-
-  <nav class="font-bold text-amber-950 bg-slate-50 flex justify-around">
-    <a href="index.html" class=" hover:bg-slate-200 text-xl py-2.5">INÍCIO</a>
-    <a href="sobreNos.html" class=" hover:bg-slate-200 text-xl py-2.5">SOBRE NÓS</a>
-    <a href="#" class="hover:bg-slate-200 text-xl py-2.5">BIOGRAFIAS</a>
+  <div class="overlay-menu hidden"></div>
+  <!-- menu de navegação do desktop -->
+  <nav class="font-bold text-amber-950 bg-slate-50  justify-around md:flex hidden navv">
+    <a href="/index.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">INÍCIO</a>
+    <a href="sobreNos.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">SOBRE NÓS</a>
+    <a href="#" class="hover:bg-slate-200 text-lg md:text-xl py-2.5">BIOGRAFIAS</a>
   </nav>
-
-<main class="min-h-screen bg-amber-50">
+  <main class="min-h-screen">
  <h1 class="text-8xl text-center text-amber-950 py-16 mt-24 mb-5" id="sobreNos">Sobre Nós</h1>
   <div class="text-justify px-72 text-4xl mb-32">
     <p> <span class="font-bold text-amber-950"> O que é Sankofa </span><br><br>Sankofa  é um conceito e símbolo da cultura africana Adinkra, que representa a sabedoria de retornar ao passado para aprender com ele e construir um futuro melhor.  Essa ideia é o coração do nosso projeto: entender nossa história, valorizar nossas raízes e transformar o conhecimento em força para o presente.  <br><br> <span class="font-bold text-amber-950">  Nossa história</span> <br><br> O Sankofa nasceu do desejo de valorizar a história e a cultura afro-brasileira de forma viva e acessível, tentando combater a invisibilização da mesma.Queremos que cada pessoa que visite nosso site encontre um espaço de aprendizado, orgulho e conexão, um lugar onde o passado dialoga com o presente e inspira o amanhã. <br>Tudo começou quando decidimos focar contar histórias esquecidas, celebrar a ancestralidade e dar voz a quem sempre fez parte da construção do Brasil. <br><br> <span class="font-bold text-amber-950">Nossa missão </span> <br><br> Promover o conhecimento, a valorização e a representatividade da cultura afro-brasileira, mostrando suas contribuições históricas, sociais e artísticas de forma educativa e inspiradora. <br><br> <span class="font-bold text-amber-950">Quem somos </span><br><br>  Somos um grupo de alunos do IFSP do curso de TI integrado ao ensino médio trabalhando no projeto da disciplina de Projeto Integrador. <br>
@@ -109,13 +83,30 @@
   
     </div>
   </div>
+  <!--  possiveis resultados para a pesquisa-->
+  <div id="possiveisResults">
+    <a href="biografias.html" id="biografias"></a>
+    <a href="sobreNos.html" id="sobre nos"></a>
+    <a href="/index.html" id="inicio"></a>
+    <a href="sobreNos.html" id="sobre nós"></a>
+    <a href="/index.html" id="início"></a>
+    <a href="biografias.html" id="biografia"></a>
+    <a href="sobreNos.html" id="sobre"></a>
+    <a href="/index.html" id="começo"></a>
+    <a href="sobreNos.html" id="saber mais"></a>
+  </div>
+
 
 </main>
 
-  <footer class="mt-auto w-full bg-amber-950 text-white items-center justify-items-center pt-8">
-    <p class="text-center text-lg">"Minha humanidade está ligada à sua, pois só podemos ser humanos juntos."</p>
-    <div class="w-9/12 mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
-      <div class="text-center md:text-left">
+  <!-- rodapé -->
+  <footer class="mt-auto w-[100%] bg-amber-950 text-white items-center justify-items-center pt-8">
+    <p class="text-center lg:text-lg md:text-xl">"Minha humanidade está ligada à sua, pois só podemos ser humanos
+      juntos."</p>
+    <!-- informações de contato -->
+    <div
+      class="lg:w-[70%] md:w-[90%] mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
+      <div class="text-left">
         <h3 class="font-semibold text-3xl py-2 tracking-wider">FALE CONOSCO</h3>
         <p class="text-xl px-4"> (00) 00000-0000 </p>
         <p class="py-1 text-xl px-4">AAAAAA@gmail.com</p>
@@ -124,21 +115,23 @@
       <div class="text-center md:text-left">
         <h3 class="font-semibold text-3xl py-2 tracking-wider">REDES SOCIAIS</h3>
         <div class="grid grid-cols-3 gap-3 place-items-center mt-2 px-2">
-          <img src="img/linkedin.png" alt="" class="h-8 w-8">
-          <img src="img/instagram.png" alt="" class="h-8 w-8">
-          <img src="img/facebook.png" alt="" class="h-8 w-8">
+          <img src="/img/linkedin.png" alt="" class="h-8 w-8">
+          <img src="/img/instagram.png" alt="" class="h-8 w-8">
+          <img src="/img/facebook.png" alt="" class="h-8 w-8">
         </div>
         <p class="py-3 px-4 text-xl">@AAAAAAAA</p>
       </div>
     </div>
-    <p class="text-center pb-4">"© 2025 Grupo 9. Todos os direitos reservados."</p>
+    <p class="text-center pb-4 lg:text-base md:text-lg">"© 2025 Grupo 9. Todos os direitos reservados."</p>
   </footer>
 
-  <script src="script.js"></script>
+
 
   <!-- 4. ADICIONADO SCRIPT DO SWIPER.JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <!-- importação do js -->
+  <script src="script.js"></script>
 
 </body>
 
