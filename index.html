@@ -107,9 +107,9 @@
 
   <!-- introdução do sobre nós  -->
   <h6
-    class="md:text-[5.5rem] font-semibold lg:text-8xl lg:font-normal text-4xl text-center text-amber-950 py-16 md:mt-24 "
+    class=" text-center text-amber-950 py-16 md:mt-24 "
     id="sobreNos">Nosso Projeto</h6>
-  <div class="text-justify md:px-[6%] px-[8%] lg:px-72 lg:text-4xl md:text-5xl text-3xl md:mb-28 mb-16 textinho">
+  <div class="text-justify md:px-[6%] px-[8%] lg:px-72 md:mb-28 mb-16 textinho">
     <p> Nosso site tem como propósito valorizar e divulgar a cultura afro-brasileira por meio da história e das pessoas
       que a construíram. <br> <br> Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas.
       Para evidenciar a evolução da luta contra o racismo, organizamos algumas dessas histórias em uma linha do tempo
@@ -121,14 +121,14 @@
   <!-- botão para o sobre nós-->
   <div class="text-center lg:mb-20 md:mb-4 mb-10">
     <a href="sobreNos/sobreNos.html"
-      class="text-white lg:text-6xl md:text-[4.5rem] text-4xl bg-gradient-to-r from-slate-800 via-slate-700 to-gray-500 rounded-4xl lg:w-32 md:w-56 hover:from-slate-900 hover:via-slate-800 hover:to-slate-600 px-9">SAIBA
+      class="text-white text-5xl bg-gradient-to-r from-slate-800 via-slate-700 to-gray-500 rounded-4xl lg:w-32 md:w-56 hover:from-slate-900 hover:via-slate-800 hover:to-slate-600 px-9 saiba">SAIBA
       MAIS</a>
   </div>
 
   <!-- SEÇÃO COM O CARROSSEL DE BIOGRAFIAS -->
   <section class="lg:w-[87rem] md:w-[100%] py-16 mb-28 mx-auto carrosselb " id="carrosselb">
     <h6
-      class="lg:text-7xl md:text-[4rem] font-semibold lg:font-normal text-center text-amber-950 lg:mb-1.5 md:mb-8 md:p-[7.5%] text-5xl mb-16">
+      class="text-center text-amber-950 lg:mb-1.5 md:mb-8 md:p-[7.5%]  mb-16">
       Biografias em Destaque</h6>
     <!-- div que organiza o conteudo em um grid com o maximo de items possivel (12) -->
     <div class="grid grid-cols-12 h-full md:w-[95%] mx-auto">
@@ -138,17 +138,17 @@
         aria-label="Anterior"><img src="img/chevron_left_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt=""
           class="mx-auto w-10"></button>
       <!-- div com os que ocupa 10 lugar no grid -->
-      <div class="col-span-10 md:p-[4%] p-[6%]  ">
+      <div class="col-span-10 md:p-[4%] p-[6%] card ">
         <div class="swiper biographies-swiper ">
           <div class="swiper-wrapper pb-12">
 
             <!-- Card Biografia 1 -->
-            <div class="swiper-slide">
+            <div class="swiper-slide ">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
                   class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
-                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Machado de Assis</h3>
                   <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
@@ -160,12 +160,12 @@
             </div>
 
             <!-- Card Biografia 2 -->
-            <div class="swiper-slide">
+            <div class="swiper-slide ">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)"
                   alt="Foto de Carolina Maria de Jesus" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
-                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Carolina Maria de Jesus</h3>
                   <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
@@ -178,12 +178,12 @@
             </div>
 
             <!-- Card Biografia 3 -->
-            <div class="swiper-slide h-3/6">
+            <div class="swiper-slide ">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
                   class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
-                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Abdias do Nascimento</h3>
                   <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
@@ -197,12 +197,12 @@
 
             <!-- Duplicando cards existentes para criar mais slides -->
             <!-- Card Biografia 4 (duplicado de 1) -->
-            <div class="swiper-slide h-3/6">
+            <div class="swiper-slide ">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/8B4513/FFF?text=Foto+Autor(a)" alt="Foto de Machado de Assis"
                   class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
-                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Machado de Assis</h3>
                   <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
@@ -215,12 +215,12 @@
             </div>
 
             <!-- Card Biografia 5 (duplicado de 2) -->
-            <div class="swiper-slide h-3/6">
+            <div class="swiper-slide ">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
                 <img src="https://placehold.co/400x400/A0522D/FFF?text=Foto+Autor(a)"
                   alt="Foto de Carolina Maria de Jesus" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
-                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Carolina Maria de Jesus</h3>
                   <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
@@ -233,12 +233,12 @@
             </div>
 
             <!-- Card Biografia 6 (duplicado de 3) -->
-            <div class="swiper-slide h-3/6">
+            <div class="swiper-slide ">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full ">
                 <img src="https://placehold.co/400x400/D2691E/FFF?text=Foto+Autor(a)" alt="Foto de Abdias do Nascimento"
                   class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
-                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem]">
+                  class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Abdias do Nascimento</h3>
                   <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
