@@ -27,6 +27,8 @@
   <div class="menu-mobile bg-amber-950 hidden" id="menu-mobile">
     <button class="btn-fechar"><img src="img/close_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""
         class="img w-10"></button>
+        <div class="p-6 text-right my-auto">
+    </div>
     <nav class="font-bold text-white links-mobile flex nav-mobile">
       <a href="index.html" class=" hover:bg-slate-200 py-2.5">INÍCIO</a>
       <a href="sobreNos/sobreNos.html" class=" hover:bg-slate-200 py-2.5">SOBRE NÓS</a>
@@ -52,17 +54,23 @@
         <div id="results" class=" bg-white search"></div>
       </form>
     </div>
+ <div class="p-6 text-right my-auto ">
+      <button id="langBtn" class="px-4 py-2 text-white hover:bg-amber-700 transition rounded-full">
+        <img src="https://static.todamateria.com.br/upload/ba/nd/bandeira_americana_bb.jpg" alt="Inglês" id="imglang" width="70px" class="rounded-lg md:flex hidden" >
+      </button>
+    </div>
+    <div class=""><img src="img/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="" class="size-10 md:hidden btnn"
+        id="btn-menu"></div>
 
-    <div class=""><img src="img/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""
-        class="size-10 md:hidden btnn" id="btn-menu"></div>
+   
 
   </header>
   <div class="overlay-menu hidden"></div>
   <!-- menu de navegação do desktop -->
   <nav class="font-bold text-amber-950 bg-slate-50  justify-around md:flex hidden navv">
-    <a href="index.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">INÍCIO</a>
-    <a href="sobreNos/sobreNos.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">SOBRE NÓS</a>
-    <a href="biografias/artistas.html" class="hover:bg-slate-200 text-lg md:text-xl py-2.5">BIOGRAFIAS</a>
+    <a href="index.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5" data-pt="INÍCIO" data-en="HOME">INÍCIO</a>
+    <a href="sobreNos/sobreNos.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5" data-pt="SOBRE NÓS" data-en="ABOUT US">SOBRE NÓS</a>
+    <a href="biografias/artistas.html" class="hover:bg-slate-200 text-lg md:text-xl py-2.5" data-pt="BIOGRAFIAS" data-en="BIOGRAPHIES">BIOGRAFIAS</a>
   </nav>
   <!-- conteiner do conteudo principal -->
   <main class="flex-1">
@@ -104,29 +112,37 @@
     <a href="index.html" id="começo"></a>
     <a href="sobreNos/sobreNos.html" id="saber mais"></a>
     <a href="biografias/artistas.html" id="artistas"></a>
-     <a href="biografias/lideres.html" id="lideres"></a>
-     <a href="biografias/alcione.html" id="alcione"></a>
+    <a href="biografias/lideres.html" id="lideres"></a>
+    <a href="biografias/alcione.html" id="alcione"></a>
   </div>
 
   <!-- introdução do sobre nós  -->
-  <h6
-    class=" text-center text-amber-950 py-16 md:mt-24 "
-    id="sobreNos">Nosso Projeto</h6>
-  <div class="text-justify md:px-[6%] px-[8%] lg:px-72 md:mb-28 mb-16 textinho">
-    <p>Nosso site tem como propósito valorizar e divulgar a cultura afro-brasileira por meio da história das pessoas que a construíram.   Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas. Para evidenciar a evolução da luta contra o racismo, organizamos algumas dessas histórias em uma linha do tempo que conecta pessoas com profissões semelhantes, destacando avanços, desafios e conquistas ao longo dos anos.   No Sankofa, acreditamos que compreender o passado é essencial para transformar o presente e construir um futuro mais justo e igualitário.
+  <h6 class=" text-center text-amber-950 py-16 md:mt-24 " id="sobreNos" data-pt="Nosso Projeto" data-en="Project">Nosso Projeto</h6>
+  <div class="text-justify md:px-[6%] px-[8%] lg:px-72 md:mb-28 mb-16 textinho" data-pt="Nosso site tem como propósito valorizar e divulgar a cultura afro-brasileira por meio da história das pessoas que
+      a construíram. Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas. Para evidenciar a
+      evolução da luta contra o racismo, organizamos algumas dessas histórias em uma linha do tempo que conecta pessoas
+      com profissões semelhantes, destacando avanços, desafios e conquistas ao longo dos anos. No Sankofa, acreditamos
+      que compreender o passado é essencial para transformar o presente e construir um futuro mais justo e igualitário." data-en="Our website aims to value and promote Afro-Brazilian culture through the stories of the people who built it. Here, you will find biographies of remarkable figures from different eras. To highlight the evolution of the fight against racism, we have organized some of these stories into a timeline that connects people with similar professions, showcasing progress, challenges, and achievements over the years. At Sankofa, we believe that understanding the past is essential to transforming the present and building a more just and equitable future.
+">
+    <p>Nosso site tem como propósito valorizar e divulgar a cultura afro-brasileira por meio da história das pessoas que
+      a construíram. Então aqui, você encontrará biografias de figuras marcantes de diferentes épocas. Para evidenciar a
+      evolução da luta contra o racismo, organizamos algumas dessas histórias em uma linha do tempo que conecta pessoas
+      com profissões semelhantes, destacando avanços, desafios e conquistas ao longo dos anos. No Sankofa, acreditamos
+      que compreender o passado é essencial para transformar o presente e construir um futuro mais justo e igualitário.
     </p>
   </div>
   <!-- botão para o sobre nós-->
   <div class="text-center lg:mb-20 md:mb-4 mb-10">
     <a href="sobreNos/sobreNos.html"
-      class="text-white text-5xl bg-gradient-to-r from-slate-800 via-slate-700 to-gray-500 rounded-4xl lg:w-32 md:w-56 hover:from-slate-900 hover:via-slate-800 hover:to-slate-600 px-9 saiba">SAIBA
+      class="text-white text-5xl bg-gradient-to-r from-slate-800 via-slate-700 to-gray-500 rounded-4xl lg:w-32 md:w-56 hover:from-slate-900 hover:via-slate-800 hover:to-slate-600 px-9 saiba" data-pt="SAIBA MAIS" data-en="
+LARN MORE">SAIBA
       MAIS</a>
   </div>
 
   <!-- SEÇÃO COM O CARROSSEL DE BIOGRAFIAS -->
   <section class="py-16 mb-28 mx-auto carrosselb " id="carrosselb">
-    <h6
-      class="text-center text-amber-950 lg:mb-1.5 md:mb-8 md:p-[7.5%]  mb-16">
+    <h6 class="text-center text-amber-950 lg:mb-1.5 md:mb-8 md:p-[7.5%]  mb-16" data-pt="Biografias em Destaque" data-en="Featured Biographies"
+>
       Biografias em Destaque</h6>
     <!-- div que organiza o conteudo em um grid com o maximo de items possivel (12) -->
     <div class="grid grid-cols-12 h-full md:w-[95%] mx-auto">
@@ -149,8 +165,11 @@
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Aleijadinho</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
-                   Artista barroco brasileiro, Aleijadinho uniu fé e emoção, tornando-se símbolo de identidade mestiça, resistência cultural, criatividade e superação pessoal no Brasil colonial.
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1" data-pt="  Artista barroco brasileiro, Aleijadinho uniu fé e emoção, tornando-se símbolo de identidade mestiça,
+                    resistência cultural, criatividade e superação pessoal no Brasil colonial." data-en="A Brazilian Baroque artist, Aleijadinho combined faith and emotion, becoming a symbol of mixed-race identity, cultural resistance, creativity, and personal resilience in colonial Brazil.
+">
+                    Artista barroco brasileiro, Aleijadinho uniu fé e emoção, tornando-se símbolo de identidade mestiça,
+                    resistência cultural, criatividade e superação pessoal no Brasil colonial.
                   </p>
                 </div>
               </div>
@@ -165,7 +184,9 @@
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Carolina Maria de Jesus</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1" data-pt=" Escritora, compositora e poetisa, sua obra 'Quarto de Despejo: Diário de uma Favelada' retrata a
+                    dura
+                    realidade da vida na favela do Canindé, em São Paulo." data-en="A writer, composer, and poet, her work “Child of the Dark: The Diary of Carolina Maria de Jesus” portrays the harsh reality of life in the Canindé favela in São Paulo.">
                     Escritora, compositora e poetisa, sua obra "Quarto de Despejo: Diário de uma Favelada" retrata a
                     dura
                     realidade da vida na favela do Canindé, em São Paulo.
@@ -177,14 +198,16 @@
             <!-- Card Biografia 3 -->
             <div class="swiper-slide ">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
-                <img src="https://i.pinimg.com/736x/ea/34/67/ea3467a36d1943f8a398a5fcc245943a.jpg" alt="Foto de Abdias do Nascimento"
-                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
+                <img src="https://i.pinimg.com/736x/ea/34/67/ea3467a36d1943f8a398a5fcc245943a.jpg"
+                  alt="Foto de Abdias do Nascimento" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Abdias do Nascimento</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
-                    Ator, poeta, escritor, dramaturgo e ativista dos direitos das populações negras. Figura central na luta contra o racismo e pela valorização da cultura afro-brasileira.
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1" data-pt="Ator, poeta, escritor, dramaturgo e ativista dos direitos das populações negras. Figura central na
+                    luta contra o racismo e pela valorização da cultura afro-brasileira." data-en="An actor, poet, writer, playwright, and activist for the rights of Black communities. A central figure in the fight against racism and in the appreciation of Afro-Brazilian culture.">
+                    Ator, poeta, escritor, dramaturgo e ativista dos direitos das populações negras. Figura central na
+                    luta contra o racismo e pela valorização da cultura afro-brasileira.
                   </p>
                 </div>
               </div>
@@ -200,8 +223,10 @@
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Erika Hilton</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
-                  Erika Hilton, primeira mulher trans e negra na Câmara, rompe barreiras e enfrenta racismo e transfobia, simbolizando representatividade e transformação social.
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1" data-pt="Erika Hilton, primeira mulher trans e negra na Câmara, rompe barreiras e enfrenta racismo e
+                    transfobia, simbolizando representatividade e transformação social." data-en="Erika Hilton, the first Black transgender woman elected to the Chamber of Deputies, breaks barriers and confronts racism and transphobia, symbolizing representation and social transformation.">
+                    Erika Hilton, primeira mulher trans e negra na Câmara, rompe barreiras e enfrenta racismo e
+                    transfobia, simbolizando representatividade e transformação social.
                   </p>
                 </div>
               </div>
@@ -210,14 +235,16 @@
             <!-- Card Biografia 5 (duplicado de 2) -->
             <div class="swiper-slide ">
               <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden h-full">
-                <img src="img/Design-sem-nome-2023-08-16T120802.223-768x432.png"
-                  alt="Foto de Mano Brown" class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
+                <img src="img/Design-sem-nome-2023-08-16T120802.223-768x432.png" alt="Foto de Mano Brown"
+                  class="w-full lg:h-64 md:h-[23rem] h-[16rem] object-cover img">
                 <div
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-3xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
-                  Mano Brown</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
-                   Mano Brown, líder dos Racionais MC’s, transformou o rap em voz da periferia, denunciando desigualdade, racismo e afirmando identidade negra no Brasil.
+                    Mano Brown</h3>
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1" data-pt="  Mano Brown, líder dos Racionais MC’s, transformou o rap em voz da periferia, denunciando
+                    desigualdade, racismo e afirmando identidade negra no Brasil." data-en="Mano Brown, leader of Racionais MC’s, turned rap into the voice of the Brazilian periphery, exposing inequality and racism while affirming Black identity in Brazil.">
+                    Mano Brown, líder dos Racionais MC’s, transformou o rap em voz da periferia, denunciando
+                    desigualdade, racismo e afirmando identidade negra no Brasil.
                   </p>
                 </div>
               </div>
@@ -232,8 +259,10 @@
                   class="p-6 flex flex-col flex-1 lg:min-h-72 lg:max-h-72 md:min-h-[25rem] md:max-h-[25rem] max-h-[22rem] min-h-[22rem] textcard">
                   <h3 class="lg:text-2xl md:text-[3rem] text-3xl font-bold text-amber-950 mb-2 font-['Tenor_Sans']">
                     Alcione</h3>
-                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1">
-                    Alcione Nazareth é referência da música brasileira, unindo samba, resistência feminina e representatividade negra, em espaços marcados por desigualdades.
+                  <p class="text-gray-700 lg:text-lg md:text-4xl text-xl flex-1" data-pt=" Alcione Nazareth é referência da música brasileira, unindo samba, resistência feminina e
+                    representatividade negra, em espaços marcados por desigualdades." data-en="Alcione Nazareth is a major figure in Brazilian music, blending samba, female resistance, and Black representation in spaces marked by inequality.">
+                    Alcione Nazareth é referência da música brasileira, unindo samba, resistência feminina e
+                    representatividade negra, em espaços marcados por desigualdades.
 
                   </p>
                 </div>
@@ -254,7 +283,7 @@
   <!-- frase de impacto -->
   <div class="lg:px-64 md:px-[8%] mb-52 mt-20 md:block px-[4%] max-w-[100%] mx-auto">
     <div class=" text-center md:text-7xl/normal text-5xl frase">
-      <h2 class="text-amber-950">
+      <h2 class="text-amber-950" data-pt="Não sou descendente de escravos. Sou descendente de pessoas que foram escravizadas." data-en="I'm not a descendant of slaves. I'm a descendant of people who were enslaved.">
         “Não sou descendente de escravos. Sou descendente de pessoas que foram escravizadas.”
       </h2>
     </div>
@@ -265,19 +294,20 @@
 
   <!-- rodapé -->
   <footer class="mt-auto w-[100%] bg-amber-950 text-white items-center justify-items-center pt-8">
-    <p class="text-center lg:text-lg md:text-xl">"Minha humanidade está ligada à sua, pois só podemos ser humanos
+    <p class="text-center lg:text-lg md:text-xl" data-pt="Minha humanidade está ligada à sua, pois só podemos ser humanos
+      juntos." data-en="Minha humanidade está ligada à sua, pois só podemos ser humanos juntos.">"Minha humanidade está ligada à sua, pois só podemos ser humanos
       juntos."</p>
     <!-- informações de contato -->
     <div
       class="lg:w-[70%] md:w-[90%] mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
       <div class="text-left">
-        <h3 class="font-semibold text-3xl py-2 tracking-wider">FALE CONOSCO</h3>
+        <h3 class="font-semibold text-3xl py-2 tracking-wider" data-pt="FALE CONOSCO" data-en="CONTACT US">FALE CONOSCO</h3>
         <p class="text-xl px-4"> (00) 00000-0000 </p>
         <p class="py-1 text-xl px-4">AAAAAA@gmail.com</p>
       </div>
       <div class="w-full md:w-1 md:h-40 bg-white mx-auto"></div>
       <div class="text-center md:text-left">
-        <h3 class="font-semibold text-3xl py-2 tracking-wider">REDES SOCIAIS</h3>
+        <h3 class="font-semibold text-3xl py-2 tracking-wider" data-pt="REDES SOCIAIS" data-en="SOCIAL MEDIA">REDES SOCIAIS</h3>
         <div class="grid grid-cols-3 gap-3 place-items-center mt-2 px-2">
           <img src="img/linkedin.png" alt="" class="h-8 w-8">
           <img src="img/instagram.png" alt="" class="h-8 w-8">
@@ -286,7 +316,7 @@
         <p class="py-3 px-4 text-xl">@AAAAAAAA</p>
       </div>
     </div>
-    <p class="text-center pb-4 lg:text-base md:text-lg">"© 2025 Grupo 9. Todos os direitos reservados."</p>
+    <p class="text-center pb-4 lg:text-base md:text-lg" data-pt="© 2025 Grupo 9. Todos os direitos reservados." data-en="© 2025 Group 9. All rights reserved.">"© 2025 Grupo 9. Todos os direitos reservados."</p>
   </footer>
 
 

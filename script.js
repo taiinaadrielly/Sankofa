@@ -271,3 +271,21 @@ btnMenu.addEventListener('click', () => {
 menu.addEventListener('click', () => {
     window.location.reload()
 })
+
+
+
+const btn = document.getElementById("langBtn");
+const btnimg = document.getElementById("imglang");
+    let lang = "pt";
+
+    btn.addEventListener("click", () => {
+      lang = lang === "pt" ? "en" : "pt";
+
+      // muda texto do botão
+      btnimg.src = lang === "pt" ? "https://static.todamateria.com.br/upload/ba/nd/bandeira_americana_bb.jpg" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/330px-Flag_of_Brazil.svg.png";
+
+      // pega todos os elementos com textos
+      document.querySelectorAll("[data-pt]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    });
