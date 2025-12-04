@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankofa - Artistas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+
+<body class="bg-orange-50 text-[#4b1f15]">
+
+    <header class="flex flex-row bg-amber-950 justify-between items-center md:px-10 sm:px-7 px-4 min-h-40">
+    <!-- div para conseguir centralizar o sankofa e separar ele da barra de pesquisa -->
+    <div class="flex relative items-center">
+      <!-- sankofa do cabeçalho em um link para a pagina inicial -->
+      <a href="index.html">
+        <h1 class="md:text-5xl text-2xl md:font-normal text-white md:pl-14">San<br class="md:hidden">kofa</h1>
+      </a>
+      <!-- formulario para o usuario inserir a buscar -->
+      <form id="searchForm" class="flex flex-col ">
+        <div class="flex">
+          <input type="text" id="searchInput" placeholder='Buscar'
+            class="md:bg-[url('img/lipa.png')] md:bg-no-repeat md:bg-right pl-6 md:pl-10 bg-contain bg-amber-50 rounded-xl md:py-1.5 py-0.5 search input" />
+          <button type="submit"
+            class="text-amber-950 submit divv font-semibold rounded-lg bg-slate-50 md:p-1.5 p-0.5 md:px-2.5 px-1.5 md:ml-3 ml-1.5 hover:bg-slate-200 md:text-base text-sm cursor-pointer ">Buscar</button>
+        </div>
+        <div id="results" class=" bg-white search"></div>
+      </form>
+    </div>
+
+    <div class=""><img src="img/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""
+        class="size-10 md:hidden btnn" id="btn-menu"></div>
+
+  </header>
+   <div class="overlay-menu hidden"></div>
+  <!-- menu de navegação do desktop -->
+  <nav class="font-bold text-amber-950 bg-slate-50  justify-around md:flex hidden navv">
+    <a href="/index.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">INÍCIO</a>
+    <a href="/sobreNos/sobreNos.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">SOBRE NÓS</a>
+    <a href="biografias/artistas.html" class="hover:bg-slate-200 text-lg md:text-xl py-2.5">BIOGRAFIAS</a>
+  </nav>
+
+
+    <!-- Conteúdo -->
+    <main class="max-w-screen-xl mx-auto px-4 py-10">
+
+        <!-- Voltar + Título -->
+        <div class="flex items-center gap-3 mb-6 mx-auto w-max">
+            <button class="text-2xl font-black">&larr;</button>
+            <h3 class="text-4xl font-semibold text-center">Artistas</h3>
+        </div>
+
+        <!-- Texto inicial -->
+        <p class="text-justify text-2xl leading-relaxed mb-16 mx-24">
+            Ao longo da história, a arte sempre esteve presente, transmitindo mensagens importantes. Muitas vezes, ela
+            representou grupos sociais, oferecendo não só entretenimento, mas também uma forma de reivindicação. No
+            Brasil, as profissões relacionadas às artes costumam ser desvalorizadas, mas mesmo assim, algumas
+            personalidades negras, que também enfrentaram marginalização e desvalorização ao longo do tempo, decidiram
+            seguir suas carreiras nessas áreas. Essas pessoas nos presentearam com obras incríveis e contribuíram para
+            avanços na sociedade brasileira por meio de atos de resistência e luta. <br> <br> Com o passar do tempo, o
+            Brasil fez avanços significativos na luta contra o racismo, o que trouxe melhorias consideráveis na vida dos
+            afro-brasileiros, abrindo mais oportunidades, inclusive no mercado de trabalho. É importante lembrar que
+            essas mudanças aconteceram graças à luta desse povo, por isso, devemos valorizar tudo que foi conquistado,
+            reconhecer as melhorias feitas e também pensar no que ainda podemos fazer para avançar. Para ajudar nesse
+            entendimento, aqui abaixo você pode conhecer a história, as realizações, as obras e os desafios de artistas
+            afro-brasileiros de diferentes épocas.
+
+        </p>
+
+        <!-- Cards de autores -->
+        <div class="grid grid-cols-3 gap-9 text-center mb-10 text-2xl">
+            <div>
+                <div class="bg-[#a25a2a] text-white py-3 text-2xl rounded-lg ">
+                    <h3>Aleijadinho</h3>
+
+                </div>
+                <div class="bg-white w-30 h-12 py-3 rounded-lg shadow-md z-50 -mt-3">
+                    <p>século XVIII</p>
+                </div>
+            </div>
+            <div class="mt-12">
+                <div class="bg-[#a25a2a] text-white py-3 rounded-lg shadow-md ">
+                    <h3>Maria Firmina dos Reis</h3>
+
+                </div>
+                <div class="bg-white w-30 h-12 py-3 rounded-lg shadow-md  z-50 -mt-3">
+                    <p>século XIX</p>
+                </div>
+            </div>
+            <div>
+                <div class="bg-[#a25a2a] text-white py-3 rounded-lg shadow-sm z-20">
+                    <h3>Mano Brown</h3>
+
+                </div>
+                <div class="bg-white w-30 h-12  py-3 rounded-lg shadow-md z-50 -mt-3">
+                    <p>século XX</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Texto longo -->
+       <section class="max-w-screen-xl mx-auto px-4 py-10">
+
+  <!-- =================== ALEIJADINHO =================== -->
+
+  <h3 class="text-4xl text-amber-950 font-bold text-center mb-12">
+    Antônio Francisco Lisboa — O Aleijadinho
+  </h3>
+
+  <p class="text-justify leading-relaxed text-2xl mb-6">
+    Antônio Francisco Lisboa, conhecido como Aleijadinho, foi um dos principais artistas do barroco brasileiro no século XVIII. Escultor, entalhador e arquiteto, destacou-se pela capacidade de traduzir fé e emoção em arte, tornando-se símbolo de criatividade em uma sociedade colonial marcada por desigualdades. Atualmente, é visto como expressão de identidade mestiça, resistência cultural e superação pessoal.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Biografia</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Nascido provavelmente em 1738, em Vila Rica (Ouro Preto), Aleijadinho trabalhou como escultor, entalhador e projetista. Filho de um carpinteiro português e de uma escravizada liberta, cresceu em um ambiente onde a arte era valorizada, o que favoreceu seu aprendizado e desenvolvimento criativo desde cedo. Aleijadinho morreu em 18 de novembro de 1814, aos 76 anos, em Ouro Preto, debilitado pela doença e vivendo recluso. Faleceu na casa da nora, que cuidou dele.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Contexto histórico</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    O século XVIII mineiro foi marcado pela exploração do ouro, pela formação de centros urbanos e pela circulação de recursos que estimularam a produção artística. Nesse cenário, as irmandades religiosas, muitas delas formadas por negros e mulatos, financiaram obras e permitiram o florescimento de um estilo artístico local, no qual Aleijadinho se insere como uma figura central.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Fatos marcantes da vida e da carreira</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Aprendendo carpintaria com o pai e desenho com mestres locais, começou jovem a atuar em igrejas de Ouro Preto e região, ganhando reconhecimento a partir de 1766. Entre 1800 e 1805 produziu os Doze Profetas e as Capelas dos Passos, em Congonhas, considerados o auge de sua obra. Também projetou elementos arquitetônicos em igrejas como São Francisco de Assis, integrando escultura e arquitetura com originalidade.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Doença e desafios pessoais</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Aos 39 anos, desenvolveu uma doença degenerativa que deformou seu corpo, levando à perda de dedos e mobilidade. Mesmo debilitado, continuou trabalhando, com ferramentas amarradas às mãos e o corpo coberto para esconder as deformações. Viveu isolado, sofrendo preconceito, mas sua produção manteve grande força emotiva e espiritual.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Características da obra</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Estudiosos destacam em suas obras a expressividade emocional, o dinamismo barroco, a simplicidade formal e a integração entre escultura e arquitetura. Sua arte representou uma adaptação original do barroco europeu à realidade mestiça e religiosa das Minas Gerais, resultando em uma estética única e profundamente brasileira.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Importância e legado</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-4">
+    Aleijadinho simboliza o momento em que a arte brasileira se afirma independentemente das referências europeias. Artista mestiço reconhecido em seu tempo, revelou a presença de influências africanas, indígenas e europeias no país. Inspirou o modernismo, sendo visto como o “herói nacional” que transformou a dor em criatividade.
+  </p>
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Seu legado influência debates sobre identidade, patrimônio e reconhecimento das contribuições afrodescendentes. O ambiente artístico das Minas Gerais no século XVIII foi crucial para a formação de uma arte nacional. Aleijadinho transformou esse contexto em expressão estética e emocional, antecipando discussões contemporâneas sobre identidade e inclusão. Sua obra permanece atual, mostrando como a arte pode transcender limitações físicas e barreiras sociais.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Interseccionalidade e Representatividade</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-4">
+    Como homem mestiço e pessoa com deficiência, Aleijadinho viveu interseção de opressões e, ainda assim, produziu obras de dimensão histórica. Hoje, é referência para debates sobre inclusão, diversidade cultural e reconhecimento da arte marginalizada, inspirando pessoas com deficiência e artistas negros.
+  </p>
+  <p class="text-justify text-2xl leading-relaxed mb-10">
+    Ele pertenceu a dois grupos marginalizados: mestiços e pessoas com deficiência. Ambas as identidades conquistaram maior visibilidade e direitos nas últimas décadas, embora as desigualdades persistam. O reconhecimento do Aleijadinho contribui para afirmar o valor dessas trajetórias na história nacional.
+  </p>
+
+  <hr class="my-12 border-stone-300"/>
+
+
+  <!-- =================== MARIA FIRMINA =================== -->
+
+  <h3 class="text-4xl text-amber-950 font-bold text-center mb-12">
+    Maria Firmina dos Reis
+  </h3>
+
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Maria Firmina dos Reis foi uma escritora, professora e ativista pioneira na luta pela igualdade racial e de gênero no Brasil. Autora do primeiro romance abolicionista brasileiro, Úrsula, e criadora da primeira escola mista do Maranhão, tornou-se símbolo de resistência e transformação social.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Biografia</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-4">
+    Maria Firmina dos Reis nasceu em 1825, em São Luís do Maranhão, e desde cedo enfrentou o racismo e o machismo presentes na sociedade escravocrata do século XIX. Em 1847, tornou-se professora pública em São José de Guimarães, conquista rara para uma mulher negra.
+  </p>
+  <p class="text-justify text-2xl leading-relaxed mb-4">
+    Sua carreira foi marcada pela defesa de uma educação inclusiva e, já aposentada, fundou a primeira escola mista e gratuita do Maranhão, fechada após pressão social.
+  </p>
+  <p class="text-justify text-2xl leading-relaxed mb-4">
+    Paralelamente, escreveu poesias, contos e romances, publicando Úrsula (1859), obra pioneira ao representar a escravidão sob o ponto de vista do sujeito escravizado e considerada o primeiro romance abolicionista escrito por uma mulher na língua portuguesa.
+  </p>
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Produziu ainda contos como <em>Gupeva</em> e <em>A Escrava</em>, o livro <em>Cantos à Beira-Mar</em> e atuou como folclorista e compositora. Enfrentou dificuldades materiais e preconceitos até o fim da vida, morrendo em 1917, pobre e cega. Seu legado, reconhecido tardiamente, consolidou-a como referência para a literatura afro-brasileira e feminista, pela defesa da liberdade, da igualdade e da valorização da identidade negra.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Fatos marcantes da vida e da carreira</h3>
+
+  <ul class="list-disc text-2xl pl-6 mb-6 space-y-1">
+    <li>Aprovação em concurso público em 1847.</li>
+    <li>Publicação de <em>Úrsula</em> em 1859.</li>
+    <li>Criação de uma escola mista em 1880.</li>
+    <li>Engajamento literário contra a escravidão.</li>
+    <li>Colaboração com jornais e registro de tradições populares.</li>
+  </ul>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Importância e legado</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-4">
+    Maria Firmina foi pioneira como romancista, educadora e pensadora abolicionista. Sua obra humanizou personagens negros e inaugurou a literatura afro-brasileira. Seu reconhecimento ocorreu apenas a partir da década de 1970, com reedições e estudos acadêmicos.
+  </p>
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Sua atuação conecta passado e presente ao mostrar que educação e literatura são instrumentos de resistência. Ao defender liberdade, igualdade e identidade afro-brasileira, antecipou pautas que seguem centrais nas discussões sociais do século XXI.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Interseccionalidade e Representatividade</h3>
+  <p class="text-justify leading-relaxed mb-4">
+    Sua trajetória dialoga com debates contemporâneos sobre raça, gênero e classe. Como mulher negra, enfrentou múltiplas opressões, inspirando escritoras e intelectuais atuais que ampliam a representatividade feminina e negra.
+  </p>
+  <p class="text-justify text-2xl leading-relaxed mb-10">
+    Fazia parte de grupos historicamente marginalizados: mulheres e pessoas negras. Apesar dos avanços desde o século XIX, sua história evidencia a permanência das desigualdades e a importância dos movimentos sociais e políticas de inclusão.
+  </p>
+
+  <hr class="my-12 border-stone-300"/>
+
+
+  <!-- =================== MANO BROWN =================== -->
+
+  <h3 class="text-4xl text-amber-950 font-bold text-center mb-12">
+    Mano Brown
+  </h3>
+
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Pedro Paulo Soares Pereira, o Mano Brown, é um dos artistas mais influentes da música brasileira. Liderando os Racionais MC’s, fez do rap um instrumento de denúncia e afirmação da cultura negra e periférica. Sua obra aborda desigualdade, racismo e identidade, tornando-se referência política e cultural no Brasil contemporâneo.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Biografia</h3>
+  <p class="text-justify leading-relaxed text-2xl mb-6">
+    Pedro Paulo Soares Pereira, conhecido como Mano Brown, nasceu em 22 de abril de 1970, em São Paulo (SP). Ele é rapper, compositor, produtor e comunicador, sendo amplamente reconhecido como uma das figuras mais importantes da música e da cultura urbana no Brasil.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Contexto histórico</h3>
+  <p class="text-justify leading-relaxed text-2xl mb-6">
+    Cresceu no Capão Redondo, em um período de crise econômica e violência. O hip-hop surgiu como voz das juventudes negras, e Brown encontrou na música uma forma de narrar essa realidade e denunciar o racismo estrutural.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Fatos marcantes da carreira</h3>
+
+  <ul class="list-disc pl-6 mb-6 space-y-1 text-2xl">
+    <li>Início nos anos 1980, participando do rap em São Bento.</li>
+    <li>Fundou os Racionais MC’s em 1988.</li>
+    <li><em>Holocausto Urbano</em> (1988): marco inicial do rap nacional.</li>
+    <li><em>Sobrevivendo no Inferno</em> (1997): sucesso, entrou no vestibular da Unicamp.</li>
+    <li><em>Nada Como um Dia...</em> (2002): consolidou o grupo com hits icônicos.</li>
+    <li>Carreira solo: <em>Boogie Naipe</em> (2016).</li>
+    <li>Podcast <em>Mano a Mano</em> (2021).</li>
+    <li>Rock in Rio (2022): reconhecimento internacional.</li>
+  </ul>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Importância e papel social</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-4">
+    O movimento iniciado nos anos 80/90 consolidou o rap como ferramenta política. Suas ideias seguem atuais diante da permanência da desigualdade, influenciando a cultura e a luta social no Brasil, e fortalecendo o empoderamento negro e periférico.
+  </p>
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Sua arte valoriza a identidade afro-brasileira, denuncia desigualdades e promove educação e consciência social. Brown tornou-se referência intelectual e símbolo de resistência negra e periférica, influenciando artistas, movimentos sociais e pesquisas acadêmicas.
+  </p>
+
+  <h3 class="text-3xl text-amber-950 font-bold text-center mb-2">Interseccionalidade e Representatividade</h3>
+  <p class="text-justify text-2xl leading-relaxed mb-4">
+    Brown representa a interseção entre raça, classe e território, rompendo padrões culturais elitizados. Sua atuação inspira movimentos de luta antirracista e projetos culturais e educacionais nas periferias.
+  </p>
+  <p class="text-justify text-2xl leading-relaxed mb-10">
+    Mano Brown faz parte da população negra e periférica, grupo historicamente invisibilizado, mas que hoje conquista maior espaço e reconhecimento na sociedade. Nesse contexto, os artistas periféricos, antes vistos como marginais, passaram a ser reconhecidos como produtores legítimos de conhecimento e cultura.
+  </p>
+  <p class="text-justify text-2xl leading-relaxed mb-6">
+    Além disso, como homem negro na liderança cultural, Brown abriu portas para novas gerações de rappers, influenciando a expansão do rap e o fortalecimento de discursos sociais no cenário artístico brasileiro.
+  </p>
+
+</section>
+    </main>
+  <footer class="mt-auto w-[100%] bg-amber-950 text-white items-center justify-items-center pt-8">
+    <p class="text-center lg:text-lg md:text-xl">"Minha humanidade está ligada à sua, pois só podemos ser humanos
+      juntos."</p>
+    <!-- informações de contato -->
+    <div
+      class="lg:w-[70%] md:w-[90%] mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
+      <div class="text-left">
+        <h3 class="font-semibold text-3xl py-2 tracking-wider">FALE CONOSCO</h3>
+        <p class="text-xl px-4"> (00) 00000-0000 </p>
+        <p class="py-1 text-xl px-4">AAAAAA@gmail.com</p>
+      </div>
+      <div class="w-full md:w-1 md:h-40 bg-white mx-auto"></div>
+      <div class="text-center md:text-left">
+        <h3 class="font-semibold text-3xl py-2 tracking-wider">REDES SOCIAIS</h3>
+        <div class="grid grid-cols-3 gap-3 place-items-center mt-2 px-2">
+          <img src="/img/linkedin.png" alt="" class="h-8 w-8">
+          <img src="/img/instagram.png" alt="" class="h-8 w-8">
+          <img src="/img/facebook.png" alt="" class="h-8 w-8">
+        </div>
+        <p class="py-3 px-4 text-xl">@AAAAAAAA</p>
+      </div>
+    </div>
+    <p class="text-center pb-4 lg:text-base md:text-lg">"© 2025 Grupo 9. Todos os direitos reservados."</p>
+  </footer>
+
+
+
+
+</body>
+
+</html>

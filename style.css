@@ -1,534 +1,904 @@
  /* fontes */
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Tenor+Sans&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Tenor+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-    /* definindo a fonte dos links */
-    a {
-      font-family: "Montserrat", serif;
-    }
+ /* definindo a fonte dos links */
+ a {
+   font-family: "Montserrat", serif;
+ }
 
-    /* definindo a fonte de cada tipo de titulo */
+ /* definindo a fonte de cada tipo de titulo */
+ h1 {
+   font-family: "Tenor Sans", sans-serif;
+   font-style: normal;
+ }
+
+ h6 {
+   font-family: "Tenor Sans", sans-serif;
+   font-style: normal;
+ }
+
+ h2 {
+   font-family: "Pinyon Script", cursive;
+   font-weight: 400;
+   font-style: normal;
+ }
+
+
+ /* Estilos para as setas de navegação do Swiper */
+ .swiper-button-next,
+ .swiper-button-prev {
+   color: #ffffff;
+   /* Cor branca para as setas */
+   background-color: rgba(0, 0, 0, 0.3);
+   /* Fundo semitransparente */
+   border-radius: 50%;
+   width: 44px;
+   height: 44px;
+ }
+
+ .swiper-button-next::after,
+ .swiper-button-prev::after {
+   font-size: 24px;
+   /* Tamanho do ícone da seta */
+ }
+
+ /* cor do body */
+ body {
+   background-color: antiquewhite
+ }
+
+ /* responsivo */
+
+
+ /* menu */
+ .menu-mobile {
+   width: 55%;
+   height: 100%;
+   position: fixed;
+   z-index: 99999;
+   left: 45%;
+ }
+
+ .nav-mobile {
+   flex-direction: column;
+   gap: 3rem;
+   text-align: right;
+   margin-top: 6rem;
+   padding: 3rem;
+   font-size: 1.5rem;
+ }
+
+ .btn-fechar {
+   margin-top: 3rem;
+   margin-left: 3rem;
+ }
+
+ .overlay-menu {
+   background-color: rgba(0, 0, 0, 0.726);
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 8888;
+ }
+
+
+ @media screen and (max-width: 2200px) {
+   .search {
+     margin-right: 0;
+     margin-left: 40%;
+     width: 60rem;
+     z-index: 300;
+
+
+   }
+
+   .input {
+     padding-bottom: 4px;
+     padding-top: 4px;
+   }
+
+   .textinho {
+     font-size: 3rem;
+   }
+
+   h1 {
+     font-size: 3.5rem;
+   }
+
+   header {
+     padding-bottom: 4rem;
+     padding-top: 4rem;
+   }
+
+   h6 {
+     font-size: 5.5rem;
+   }
+
+   .carrosselb {
+     width: 94%;
+     height: 100%;
+   }
+
+   .carrosselb p {
+    text-align: justify;
+     font-size: 1.43rem;
+   }
+
+   .carrosselb h3 {
+    text-align: center;
+     font-size: 2.05rem;
+   }
+
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     width: 27rem;
+
+   }
+
+   .frase {
+     font-size: 4.5rem;
+   }
+
+   .navv a {
+     font-size: 1.4rem;
+   }
+
+   footer p {
+     font-size: 1.3rem;
+   }
+   .saiba {
+    margin-top: 12%;
+     font-size: 4rem;
+   }
+ }
+
+ 
+ @media screen and (max-width: 1699px) {
     h1 {
-      font-family: "Tenor Sans", sans-serif;
-      font-style: normal;
-    }
+     padding: 3%;
+   }
 
-    h6 {
-      font-family: "Tenor Sans", sans-serif;
-      font-style: normal;
-    }
+   .frase h2 {
+     font-size: 5rem;
+   }
 
-    h2 {
-      font-family: "Pinyon Script", cursive;
-      font-weight: 400;
-      font-style: normal;
-    }
+   .frase h3 {
+     font-size: 3rem;
+   }
 
 
-    /* Estilos para as setas de navegação do Swiper */
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #ffffff;
-      /* Cor branca para as setas */
-      background-color: rgba(0, 0, 0, 0.3);
-      /* Fundo semitransparente */
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-    }
+   .bio-prev {
+     margin-left: 28px;
+   }
 
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      font-size: 24px;
-      /* Tamanho do ícone da seta */
-    }
-
-    /* cor do body */
-    body {
-      background-color: antiquewhite
-    }
-
-    /* responsivo */
-    @media screen and (max-width: 900px) {
-      h1 {
-        padding: 3%;
-      }
-    }
-
-    /* menu */
-    .menu-mobile {
-      width: 55%;
-      height: 100%;
-      position: fixed;
-      z-index: 99999;
-      left: 45%;
-    }
-
-    .nav-mobile {
-      flex-direction: column;
-      gap: 3rem;
-      text-align: right;
-      margin-top: 6rem;
-      padding: 3rem;
-      font-size: 1.5rem;
-    }
-
-    .btn-fechar {
-      margin-top: 3rem;
-      margin-left: 3rem;
-    }
-
-    .overlay-menu {
-      background-color: rgba(0, 0, 0, 0.726);
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 8888;
-    }
-
-    @media (max-width: 640px) {
-      .nav-mobile {
-        font-size: 1rem;
-      }
-    }
-
-    @media screen and (min-width: 1700px) {
-      .search {
-        margin-right: 0;
-        margin-left: 40%;
-        width:60rem;
-         z-index: 300;
-      
-     
-      } 
-      .input{
-        padding-bottom:  4px;
-        padding-top: 4px;
-      } 
-      .textinho {
-        font-size: 2.5rem;
-      }
-      h1 {
-        font-size: 3.5rem;
-      }
-      header {
-        padding-bottom:  4rem;
-        padding-top: 4rem;
-      }
-      h6 {
-        font-size: 5rem;
-      }
-      .carrosselb {
-        width: 94%;
-        height:100%;
-      }
-        .carrosselb p {
-       font-size: 1.4rem;
-      }
-       .carrosselb h2, h3 , h4 {
-       font-size: 1.9rem;
-      }
-      .frase{
-        font-size: 4.5rem;
-      }
-      .navv a{
-        font-size: 1.4rem;
-      }
-      footer p{
-        font-size: 1.3rem;
-      }
-    }
-
-    @media screen and (min-width: 885px) {
-
-      .search {
-        margin-right: 0;
-        margin-left: 40%;
-        width:60rem;} 
-
-      
-      }
-   @media screen and (max-width: 885px) {
-      .frase {
-        text-align: center;
-        font-size: 4.8rem;
-      }
-
-      .bio-prev {
-        margin-left: 28px;
-      }
-      .search {
-        margin-right: 0;
-        margin-left: 20%;
-        width:30rem;
-        
-     
-      }
-        h6{
-          font-size: 3.5rem;
-          ;
-        }
-      
-      .textinho{
-        font-size: 2rem;
-        padding-left: 12%;
-        padding-right: 12%;
-      }
-
-      .saiba{
-        font-size: 3rem;
-      }
-      .card{
-        width: 40rem;
-       margin-left: 4%;
-  
-      }
-
-      .carrosselb p {
-        text-align: justify;
-        padding-top: 1%;
-        font-size: 2.1rem;
-     
-       }
-        .carrosselb h2, h3 , h4 {
-          text-align: center;
-        font-size: 2.5rem;
-       }
-       .textcard{
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 34.5rem;
-  
-       }
-      
-    }
-
-    @media screen and (max-width: 840px) {
-      .bio-prev {
-        margin-left: 22px;
-      }
-      .search {
-        margin-right: 0;
-        margin-left: 20%;
-        width:30rem;
-      }
-
-      .card{
-        width: 37.5rem;
-       margin-left: 4%;
-  
-      }
-
-      .carrosselb p {
-        text-align: justify;
-        padding-top: 1%;
-        font-size: 2.2rem;
-     
-       }
-        .carrosselb h2, h3 , h4 {
-          text-align: center;
-        font-size: 2.4rem;
-       }
-       .textcard{
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 32rem;
-  
-       }
-    }
-
-    @media screen and (max-width: 802px) {
-      header {
-        padding: 3rem;
-      }
-
-      .search {
-        margin-left: 35%;
-        width: 27rem;
-      }
-
-      .frase {
-        text-align: center;
-        font-size: 4.7rem;
-      }
-      .card{
-        width: 35.5rem;
-       margin-left: 4%;
-  
-      }
-
-      .carrosselb p {
-        text-align: justify;
-        padding-top: 1%;
-        font-size: 2.1rem;
-     
-       }
-        .carrosselb h2, h3 , h4 {
-          text-align: center;
-        font-size: 2.3rem;
-       }
-       .textcard{
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 30rem;
-  
-       }
-    }
-
-    @media screen and (max-width: 767px) {
-      .frase {
-        text-align: center;
-        font-size: 4.5rem;
-      }
-
-      .search {
-       margin-left: 20% ;
-        width: 26rem;
-
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-      .card{
-        width: 34.5rem;
-       margin-left: 4%;
-  
-      }
-
-      .carrosselb p {
-        text-align: justify;
-        padding-top: 1%;
-        font-size: 1.7rem;
-     
-       }
-        .carrosselb h2, h3 , h4 {
-          text-align: center;
-        font-size: 2.2rem;
-       }
-       .textcard{
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 29rem;
-  
-       }
-    }
-
-    @media screen and (max-width: 700px) {
-      .frase {
-        text-align: center;
-        font-size: 4.5rem;
-      }
-
-      .search {
-        margin-left: 20%;
-        width: 20rem;
-
-      }
-
-      .card{
-        width: 31.5rem;
-      }
-
-      .carrosselb p {
-        text-align: justify;
-        padding-top: 1%;
-        font-size: 1.6rem;
-     
-       }
-        .carrosselb h2, h3 , h4 {
-          text-align: center;
-        font-size: 1.9rem;
-       }
-       .textcard{
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 26rem;
-  
-       }
-
-    }  
-   
-    @media screen and (max-width: 690px) {
-      .card {
-        margin-left: 5% ;
-      }
-    } 
-    @media screen and (max-width: 680px) {
-      .card {
-        margin-left: 5% ;
-      }
-    }
-    @media screen and (max-width: 670px) {
-      .card {
-        margin-left: 4.5% ;
-      }
-    }
-    
-    @media screen and (max-width: 660px) {
-      .card {
-        margin-left: 4% ;
-      }
-    }
-    
-    @media screen and (max-width: 650px) {
-      .card {
-        margin-left: 3.5% ;
-      }
-    }
-    
-     @media screen and (max-width: 640px) {
-      .card {
-        margin-left: 3% ;
-      }
-    }
-   
-    @media screen and (max-width: 630px) {
-      .card {
-        margin-left: 2.5% ;
-      }
-    }
-   
-    @media screen and (max-width: 620px) {
-      .card {
-        margin-left: 1.5% ;
-      }
-    }
-    
-
-    @media screen and (max-width: 610px) {
-      .card {
-        margin-left: 0% ;
-      }
-    }
-   
-
-    @media screen and (max-width: 600px) {
-      .frase {
-        text-align: center;
-        font-size: 4.5rem;
-      }
-
-      .search {
-        margin-left: 20%;
-        width: 13rem;
-
-      }
-
-    }
-    @media screen and (max-width: 550px) {
-      .frase {
-        text-align: center;
-        font-size: 4.5rem;
-      }
-
-      .search {
-        margin-left: 20%;
-        width: 10rem;
-
-      }
-
-    }
-
-    @media screen and (max-width: 500px) {
-    
-      header {
-        padding: 2.5rem;
-      }
-
-     h1{
-        font-size: 1.5rem;
-     }
-      .search {
-        margin-left: 18%;
-        width: 10.5rem;
-      }
-
-      .img {
-        display: none;
-      }
-
-      .frase {
-        text-align: center;
-        font-size: 3rem;
-        padding: 4%;
-      }
-    }
-
-     @media screen and (max-width: 450px) {
-    
-      header {
-        padding: 2.5rem;
-      }
-
-     h1{
-        font-size: 1.5rem;
-     }
-      .search {
-        margin-left: 15%;
-        width: 8rem;
-      }
-    }
-
-    
+   .search {
+     margin-right: 0;
+     margin-left: 20%;
+     width: 24rem;
 
 
-    @media screen and (max-width: 400px) {
-      header {
-        padding: 2rem;
-      }
+   }
 
-      .search {
-        margin-left: 20%;
-        width: 7rem;
-      }
+   h6 {
+     font-size: 8rem;
+     ;
+   }
 
-      .img {
-        display: none;
-      }
+   .textinho {
+     font-size: 6rem;
+     padding-left: 12%;
+     padding-right: 12%;
+   }
 
-      .frase {
-        text-align: center;
-        font-size: 3rem;
-        padding: 4%;
-      }
-    }
+   .saiba {
+     font-size: 3.7rem;
+   }
 
-    @media screen and (max-width: 384px) {
-      header {
-        padding: 2rem;
-      }
+   #carrosselb p {
+     text-align: justify;
+     padding-top: 1%;
+     font-size: 1.35rem;
 
-      .search {
-        margin-left: 18%;
-        width: 7rem;
-      }
+   }
 
-      .btnn{
-        width: 2.2rem;
-        height: 2.2rem;
-        margin-left: 0.7rem;
-      }
+   #carrosselb h3 {
+     text-align: center;
+     font-size: 1.7rem;
+   }
 
-      .img {
-        display: none;
-      }
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 24rem;
 
-      .frase {
-        text-align: center;
-        font-size: 3rem;
-        padding: 4%;
-      }
-    }
-     @media screen and (max-width: 364px) {
-      header {
-        padding: 2rem;
-      }
+   }
 
-      .search {
-        margin-left: 18%;
-        width: 6rem;
-      }}
+   footer p {
+     font-size: 1.3rem;
+   }
+
+   footer h3 {
+     font-size: 1.5rem;
+   }
+
+ };
+
+@media screen and (max-width: 1449px) {
+   h1 {
+     padding: 3%;
+   }
+
+   .frase h2 {
+     font-size: 5rem;
+   }
+
+   .frase h3 {
+     font-size: 3rem;
+   }
+
+
+   .bio-prev {
+     margin-left: 28px;
+   }
+
+   .search {
+     margin-right: 0;
+     margin-left: 20%;
+     width: 30rem;
+
+
+   }
+
+   h6 {
+     font-size: 4rem;
+     ;
+   }
+
+   .textinho {
+     font-size: 2.5rem;
+     padding-left: 12%;
+     padding-right: 12%;
+   }
+
+   .saiba {
+     font-size: 3.7rem;
+   }
+
+   #carrosselb p {
+     text-align: justify;
+     padding-top: 1%;
+     font-size: 1rem;
+
+   }
+
+   #carrosselb h3 {
+     text-align: center;
+     font-size: 1.13rem;
+   }
+
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 18rem;
+
+   }
+
+   footer p {
+     font-size: 1.3rem;
+   }
+
+   footer h3 {
+     font-size: 1.5rem;
+   }
+
+ }
+
+ @media screen and (max-width: 1200px) {
+   h1 {
+     padding: 3%;
+   }
+
+   .frase h2 {
+     font-size: 4rem;
+   }
+
+   .frase h3 {
+     font-size: 2.5rem;
+   }
+
+
+   .bio-prev {
+     margin-left: 28px;
+   }
+
+   .search {
+     margin-right: 0;
+     margin-left: 20%;
+     width: 30rem;
+
+
+   }
+
+   h6 {
+     font-size: 5rem;
+     ;
+   }
+
+   .textinho {
+     font-size: 2.8rem;
+     padding-left: 12%;
+     padding-right: 12%;
+   }
+
+   .saiba {
+     font-size: 3.7rem;
+   }
+
+   #carrosselb p {
+     text-align: justify;
+     padding-top: 1%;
+     font-size: 1.22rem;
+
+   }
+
+   #carrosselb h3 {
+     text-align: center;
+     font-size: 1.41rem;
+   }
+
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 20rem;
+
+   }
+
+   footer p {
+     font-size: 1.3rem;
+   }
+
+   footer h3 {
+     font-size: 1.5rem;
+   } 
+   .search {
+     margin-right: 0;
+     margin-left: 40%;
+     width: 60rem;
+   }
+
+
+
+ }
+
+
+ 
+
+ @media screen and (max-width: 900px) {
+   h1 {
+     padding: 3%;
+   }
+
+   .frase {
+     text-align: center;
+     font-size: 4.8rem;
+   }
+
+   .bio-prev {
+     margin-left: 28px;
+   }
+
+   .search {
+     margin-right: 0;
+     margin-left: 20%;
+     width: 30rem;
+
+
+   }
+
+   h6 {
+     font-size: 5rem;
+     ;
+   }
+
+   .textinho {
+     font-size: 3.5rem;
+     padding-left: 12%;
+     padding-right: 12%;
+   }
+
+   .saiba {
+     font-size: 3rem;
+   }
+
+   .card {
+     width: 40rem;
+     margin-left: 4%;
+
+   }
+
+   .carrosselb p {
+     text-align: justify;
+     padding-top: 1%;
+     font-size: 1.5rem;
+
+   }
+
+   .carrosselb h3 {
+     text-align: center;
+     font-size: 2.5rem;
+   }
+
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 34.5rem;
+
+   }
+
+ }
+ 
+
+ @media screen and (max-width: 840px) {
+   .bio-prev {
+     margin-left: 22px;
+   }
+
+   .search {
+     margin-right: 0;
+     margin-left: 20%;
+     width: 30rem;
+   }
+
+   .card {
+     width: 37.5rem;
+     margin-left: 4%;
+
+   }
+
+   .carrosselb p {
+     text-align: justify;
+     padding-top: 1%;
+     font-size: 2.2rem;
+
+   }
+
+   .carrosselb h3{
+     text-align: center;
+     font-size: 2.4rem;
+   }
+
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 32rem;
+
+   }
+ }
+
+ @media screen and (max-width: 802px) {
+   header {
+     padding: 3rem;
+   }
+
+   .search {
+     margin-left: 35%;
+     width: 27rem;
+   }
+
+   .frase {
+     text-align: center;
+     font-size: 4.7rem;
+   }
+
+   .card {
+     width: 35.5rem;
+     margin-left: 4%;
+
+   }
+
+   .carrosselb p {
+     text-align: justify;
+     padding-top: 1%;
+     font-size: 2.1rem;
+
+   }
+
+   .carrosselb h3{
+     text-align: center;
+     font-size: 2.3rem;
+   }
+
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 30rem;
+
+   }
+ }
+
+ @media screen and (max-width: 767px) {
+   .frase {
+     text-align: center;
+     font-size: 4.5rem;
+   }
+
+   .search {
+     margin-left: 20%;
+     width: 26rem;
+
+   }
+
+   h1 {
+     font-size: 2rem;
+   }
+
+   .card {
+     width: 34.5rem;
+     margin-left: 4%;
+
+   }
+
+   .carrosselb p {
+     text-align: justify;
+     padding-top: 1%;
+     font-size: 1.7rem;
+
+   }
+
+   .carrosselb h3{
+     text-align: center;
+     font-size: 2.2rem;
+   }
+
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 29rem;
+
+   }
+ }
+
+ @media screen and (max-width: 700px) {
+   .frase {
+     text-align: center;
+     font-size: 4.5rem;
+   }
+
+   .search {
+     margin-left: 20%;
+     width: 20rem;
+
+   }
+
+   .card {
+     width: 31.5rem;
+   }
+
+   .carrosselb p {
+     text-align: justify;
+     padding-top: 1%;
+     font-size: 1.6rem;
+
+   }
+
+   .carrosselb h3 {
+     text-align: center;
+     font-size: 1.9rem;
+   }
+
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 26rem;
+
+   }
+
+ }
+
+ @media screen and (max-width: 690px) {
+   .card {
+     margin-left: 5%;
+   }
+ }
+
+ @media screen and (max-width: 680px) {
+   .card {
+     margin-left: 5%;
+   }
+ }
+
+ @media screen and (max-width: 670px) {
+   .card {
+     margin-left: 4.5%;
+   }
+ }
+
+ @media screen and (max-width: 660px) {
+   .card {
+     margin-left: 4%;
+   }
+ }
+
+ @media screen and (max-width: 650px) {
+   .card {
+     margin-left: 3.5%;
+   }
+ }
+
+ @media screen and (max-width: 640px) {
+   .card {
+     margin-left: 3%;
+   }
+
+   .nav-mobile {
+     font-size: 1rem;
+   }
+ }
+
+ @media screen and (max-width: 630px) {
+   .card {
+     margin-left: 2.5%;
+   }
+ }
+
+ @media screen and (max-width: 620px) {
+   .card {
+     margin-left: 1.5%;
+   }
+ }
+
+
+ @media screen and (max-width: 610px) {
+   .card {
+     margin-left: 0%;
+   }
+ }
+
+
+ @media screen and (max-width: 600px) {
+   .frase {
+     text-align: center;
+     font-size: 4.5rem;
+   }
+
+   .search {
+     margin-left: 20%;
+     width: 13rem;
+
+   }
+
+ }
+
+ @media screen and (max-width: 550px) {
+   .frase {
+     text-align: center;
+     font-size: 4.5rem;
+   }
+
+   .search {
+     margin-left: 20%;
+     width: 10rem;
+
+   }
+
+ }
+
+ @media screen and (max-width: 500px) {
+
+   header {
+     padding: 2.5rem;
+   }
+
+   h1 {
+     font-size: 1.5rem;
+   }
+
+   .search {
+     margin-left: 18%;
+     width: 10.5rem;
+   }
+
+   .img {
+     display: none;
+   }
+
+   .frase {
+     text-align: center;
+     font-size: 3rem;
+     padding: 4%;
+   }
+ }
+
+ @media screen and (max-width: 450px) {
+
+  h6{
+    font-size: 3.1rem;
+  }
+
+  .textinho{
+    font-size: 2.4rem;
+  }
+
+   header {
+     padding: 2.5rem;
+   }
+
+   h1 {
+     font-size: 1.5rem;
+   }
+
+   .search {
+     margin-left: 35%;
+     width: 9rem;
+   }
+
+   .card {
+     width: 21.5rem;
+     margin-left: 5.3%;
+   }
+
+   #carrosselb p {
+     text-align: justify;
+     padding-top: 3%;
+     font-size: 1.3rem;
+
+   }
+
+   #carrosselb h3 {
+     text-align: center;
+     font-size: 1.4rem;
+   }
+
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 18rem;
+
+   }
+
+   .saiba {
+     font-size: 2.5rem;
+   }
+
+
+ }
+
+
+  @media screen and (max-width: 420px) {
+
+  .frase h2{
+    font-size: 3rem;
+  }
+
+  .frase h3{
+    text-align: end;
+    font-size: 1.7rem;
+  }
+
+  footer h3{
+    font-size: 1.2rem;
+  }
+
+  footer p{
+    font-size: 1rem;
+  }
+
+  h6{
+    font-size: 2.3rem;
+  }
+
+  .textinho{
+    font-size: 1.7rem;
+  }
+
+   header {
+     padding: 2.5rem;
+   }
+
+   .search {
+     margin-left: 35%;
+     width: 9rem;
+   }
+
+   .card {
+     width: 16.2rem;
+     margin-left: 10%;
+   }
+
+   #carrosselb p {
+     text-align: left;
+     padding-top: 3%;
+     font-size: 1.21rem;
+
+   }
+
+   #carrosselb h3 {
+     text-align: center;
+     font-size: 1.4rem;
+   }
+
+   .textcard {
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 14.9rem;
+   }
+
+   #carrosselb {
+    padding-right: 3.5%;
+   }
+
+    .saiba {
+     font-size: 2rem;
+   }
+
+
+ }
+
+
+
+
+
+
+ @media screen and (max-width: 400px) {
+   header {
+     padding: 2rem;
+   }
+
+   .search {
+     margin-left: 20%;
+     width: 7rem;
+   }
+
+   .img {
+     display: none;
+   }
+
+   .frase {
+     text-align: center;
+     font-size: 3rem;
+     padding: 4%;
+   }
+ }
+
+ @media screen and (max-width: 384px) {
+   header {
+     padding: 2rem;
+   }
+
+   .search {
+     margin-left: 18%;
+     width: 7rem;
+   }
+
+   .btnn {
+     width: 2.2rem;
+     height: 2.2rem;
+     margin-left: 0.7rem;
+   }
+
+   .img {
+     display: none;
+   }
+
+   .frase {
+     text-align: center;
+     font-size: 3rem;
+     padding: 4%;
+   }
+ }
+
+ @media screen and (max-width: 364px) {
+   header {
+     padding: 2rem;
+   }
+
+   .search {
+     margin-left: 18%;
+     width: 6rem;
+   }
+ }

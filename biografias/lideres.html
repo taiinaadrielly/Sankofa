@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankofa - Líderes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+
+<body class="bg-orange-50 text-[#4b1f15]">
+
+    <header class="flex flex-row bg-amber-950 justify-between items-center md:px-10 sm:px-7 px-4 min-h-40">
+    <!-- div para conseguir centralizar o sankofa e separar ele da barra de pesquisa -->
+    <div class="flex relative items-center">
+      <!-- sankofa do cabeçalho em um link para a pagina inicial -->
+      <a href="index.html">
+        <h1 class="md:text-5xl text-2xl md:font-normal text-white md:pl-14">San<br class="md:hidden">kofa</h1>
+      </a>
+      <!-- formulario para o usuario inserir a buscar -->
+      <form id="searchForm" class="flex flex-col ">
+        <div class="flex">
+          <input type="text" id="searchInput" placeholder='Buscar'
+            class="md:bg-[url('img/lipa.png')] md:bg-no-repeat md:bg-right pl-6 md:pl-10 bg-contain bg-amber-50 rounded-xl md:py-1.5 py-0.5 search input" />
+          <button type="submit"
+            class="text-amber-950 submit divv font-semibold rounded-lg bg-slate-50 md:p-1.5 p-0.5 md:px-2.5 px-1.5 md:ml-3 ml-1.5 hover:bg-slate-200 md:text-base text-sm cursor-pointer ">Buscar</button>
+        </div>
+        <div id="results" class=" bg-white search"></div>
+      </form>
+    </div>
+
+    <div class=""><img src="img/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""
+        class="size-10 md:hidden btnn" id="btn-menu"></div>
+
+  </header>
+   <div class="overlay-menu hidden"></div>
+  <!-- menu de navegação do desktop -->
+  <nav class="font-bold text-amber-950 bg-slate-50  justify-around md:flex hidden navv">
+    <a href="/index.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">INÍCIO</a>
+    <a href="/sobreNos/sobreNos.html" class=" hover:bg-slate-200 text-lg md:text-xl py-2.5">SOBRE NÓS</a>
+    <a href="biografias/artistas.html" class="hover:bg-slate-200 text-lg md:text-xl py-2.5">BIOGRAFIAS</a>
+  </nav>
+
+
+    <!-- Conteúdo -->
+    <main class="max-w-screen-xl mx-auto px-4 py-10">
+
+        <!-- Voltar + Título -->
+        <div class="flex items-center gap-3 mb-6 mx-auto w-max">
+            <button class="text-2xl font-black">&larr;</button>
+            <h2 class="text-4xl font-semibold text-center">Artistas</h2>
+        </div>
+
+        <!-- Texto inicial -->
+        <p class="text-justify  text-2xl leading-relaxed mb-16 mx-24">
+            Ao longo da história, a liderança e a atuação política sempre estiveram presentes como formas de organização social e de transformação. No Brasil, as carreiras políticas costumam ser marcadas por desigualdades e exclusões, sendo quase totalmente restritas a certas classes sociais,  e, ainda assim, diversas personalidades negras, que historicamente enfrentaram marginalização e desvalorização, lutaram para ocupar esses lugares de poder. Esses líderes nos deixaram legados importantes e contribuíram para avanços na sociedade brasileira por meio de resistência, luta e participação ativa nos rumos do país. <br> <br>Com o passar do tempo, o Brasil fez avanços significativos na luta contra o racismo, o que trouxe melhorias consideráveis na vida dos afro-brasileiros, abrindo mais oportunidades, inclusive no mercado de trabalho. É importante lembrar que essas mudanças aconteceram graças à luta desse povo, por isso, devemos valorizar tudo que foi conquistado, reconhecer as melhorias feitas e também pensar no que ainda podemos fazer para avançar. Para ajudar nesse entendimento, aqui abaixo você pode conhecer a história, as realizações, as obras e os desafios de líderes e políticos afro-brasileiros de diferentes épocas.
+
+
+
+        </p>
+
+        <!-- Cards de autores -->
+        <div class="grid grid-cols-3 gap-9 text-center mb-10 text-2xl">
+            <div>
+                <div class="bg-[#a25a2a] text-white py-3 rounded-lg ">
+                    <h3>Aqualtune</h3>
+
+                </div>
+                <div class="bg-white w-30 h-12 py-3 rounded-lg shadow-md z-50 -mt-3">
+                    <p>século XVI</p>
+                </div>
+            </div>
+            <div class="mt-12">
+                <div class="bg-[#a25a2a] text-white py-3 rounded-lg shadow-md ">
+                    <h3>José do Patrocinio</h3>
+
+                </div>
+                <div class="bg-white w-30 h-12 py-3 rounded-lg shadow-md  z-50 -mt-3">
+                    <p>século XIX</p>
+                </div>
+            </div>
+            <div>
+                <div class="bg-[#a25a2a] text-white py-3 rounded-lg shadow-sm z-20">
+                    <h3>Erika Hilton</h3>
+
+                </div>
+                <div class="bg-white w-30 h-12  py-3 rounded-lg shadow-md z-50 -mt-3">
+                    <p>século XXI</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Texto longo -->
+       <section class="max-w-screen-xl mx-auto px-4 py-10">
+
+  
+    <!-- AQUALTUNE -->
+    <section class="space-y-6 text-2xl">
+      <h1 class="text-4xl font-bold text-amber-950 text-center my-20">
+        Aqualtune
+      </h1>
+
+      <p class="text-2xl">
+        Aqualtune, princesa do Reino do Congo e protagonista do romance <em>Aqualtune: um sonho chamado liberdade</em>,
+        tornou-se símbolo da resistência negra feminina. Sua trajetória evidencia coragem, liderança e conexão espiritual,
+        ecoando nas lutas atuais de mulheres quilombolas por território e reconhecimento.
+      </p>
+      <p class="text-2xl">
+        Em debates sobre interseccionalidade e representatividade, sua figura inspira ações políticas e acadêmicas que
+        buscam valorizar a presença negra feminina na história.
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Biografia</h2>
+      <p class="text-2xl">
+        Aqualtune Nimi a Mpanzu, nascida por volta do século XVII (cerca de 1600), foi princesa, líder militar e
+        matriarca quilombola. Figura central na história da resistência negra no Brasil, ela atuou como líder política e
+        estratégica.
+      </p>
+      <p class="text-2xl">
+        Não há registros sobre a data ou as circunstâncias de sua morte.
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Contexto histórico</h2>
+      <p class="text-2xl">
+        Aqualtune viveu durante conflitos entre o Reino do Congo e os portugueses, em um período de escravização em massa
+        e disputas políticas. Impedida de assumir o trono por ser mulher, foi capturada na Batalha de Bumbi e enviada ao
+        Brasil, onde se tornou figura central do Quilombo dos Palmares.
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Fatos marcantes</h2>
+      <ul class="list-disc pl-6 space-y-2 text-2xl">
+        <li>Liderou tropas na Batalha de Bumbi.</li>
+        <li>Foi capturada e trazida ao Brasil como escravizada.</li>
+        <li>Fugiu do engenho Bom Sucesso e conduziu fuga coletiva para Palmares.</li>
+        <li>Tornou-se líder espiritual e política.</li>
+        <li>Foi mãe de Ganga Zumba, Ganga Zona e Sabina; avó de Zumbi dos Palmares.</li>
+        <li>Sucedeu a Acotirene como matriarca.</li>
+      </ul>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Importância</h2>
+      <p class="text-2xl">
+        Aqualtune é símbolo de resistência negra e feminina. Sua atuação em Palmares representa a preservação da cultura
+        africana e a construção de identidade coletiva na diáspora.
+      </p>
+      <p class="text-2xl">
+        Sua memória ressurge como ferramenta de reconstrução histórica, fortalecendo identidades negras e pautando debates
+        sobre justiça social e cultura afro-brasileira.
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Interseccionalidade e representatividade</h2>
+      <p class="text-2xl">
+        Sua história revela a sobreposição de opressões de raça, gênero e classe. Aqualtune inspira debates sobre
+        feminismo negro, ancestralidade e a luta política das mulheres quilombolas contemporâneas.
+      </p>
+      <p class="text-2xl">
+        Hoje, movimentos como o CONAQ evidenciam a luta por terra e direitos, enquanto pesquisas mostram que o Estado
+        ainda falha em efetivar políticas de reconhecimento e proteção.
+      </p>
+    </section>
+
+<hr>
+    <!-- JOSÉ DO PATROCÍNIO -->
+    <section class="space-y-6">
+      <h1 class="text-4xl font-bold text-amber-950 text-center my-20">
+        José do Patrocínio
+      </h1>
+
+      <p class="text-2xl">
+        José do Patrocínio foi um dos principais líderes do movimento abolicionista no Brasil do século XIX. Filho de uma
+        mulher negra escravizada e de um padre branco, dedicou sua vida à luta contra a escravidão e à defesa dos direitos
+        da população negra.
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Biografia</h2>
+      <p class="text-2xl">
+        José Carlos do Patrocínio, nascido em 1853, foi jornalista, escritor, orador, político e abolicionista, destacando-se
+        como uma das figuras mais importantes do movimento pela abolição da escravidão no Brasil.
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Contexto histórico</h2>
+      <p class="text-2xl">
+        Patrocínio atuou no período do Brasil Império, marcado por transformações legais e sociais, como a Lei do Ventre
+        Livre (1871) e a Abolição (1888).
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Fatos marcantes</h2>
+      <ul class="list-disc pl-6 space-y-2 text-2xl">
+        <li>Fundou o jornal Gazeta da Tarde.</li>
+        <li>Organizou a Confederação Abolicionista.</li>
+        <li>Escreveu o romance Motta Coqueiro.</li>
+        <li>Participou da assinatura da Lei Áurea.</li>
+        <li>Criou a Guarda Negra.</li>
+        <li>Defendeu os direitos da mulher negra.</li>
+      </ul>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Importância</h2>
+      <p class="text-2xl">
+        Patrocínio foi uma figura essencial para o avanço do abolicionismo. Sua produção intelectual e ativismo servem
+        como referência para movimentos sociais, culturais e acadêmicos.
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Interseccionalidade e representatividade</h2>
+      <p class="text-2xl">
+        Sua trajetória evidencia a interseção entre raça, classe e gênero. Ao denunciar a opressão vivida por negros e
+        mulheres, especialmente as negras, Patrocínio antecipa debates atuais sobre feminismo negro, desigualdade e justiça racial.
+      </p>
+    </section>
+
+<hr>
+    <!-- ERIKA HILTON -->
+    <section class="space-y-6">
+      <h1 class="text-4xl font-bold text-amber-950 text-center my-20">
+        Erika Hilton
+      </h1>
+
+      <p class="text-2xl">
+        Erika Hilton é uma das figuras mais marcantes da política brasileira atual. Como a primeira mulher trans e negra a
+        ocupar uma cadeira na Câmara dos Deputados, sua presença rompe barreiras históricas.
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Biografia</h2>
+      <p class="text-2xl">
+        Nome completo: Erika Hilton <br>
+        Profissão: Deputada federal, ativista dos Direitos Humanos <br>
+        Nascimento: 1992
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Contexto histórico</h2>
+      <p class="text-2xl">
+        Nascida e criada em um Brasil marcado por desigualdades e violência contra pessoas LGBTQIA+, especialmente mulheres
+        trans negras.
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Fatos marcantes</h2>
+      <ul class="list-disc pl-6 space-y-2 text-2xl">
+        <li>Expulsa de casa aos 14 anos.</li>
+        <li>Cursou pedagogia e gerontologia.</li>
+        <li>Criou cursinho para mulheres trans.</li>
+        <li>Eleita codeputada (2018).</li>
+        <li>Vereadora mais votada do Brasil (2020).</li>
+        <li>Deputada federal (2022).</li>
+        <li>Reconhecida pela TIME.</li>
+      </ul>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Importância</h2>
+      <p class="text-2xl">
+        Erika é liderança central na defesa dos direitos humanos, da população LGBTQIA+, das mulheres negras e das periferias.
+      </p>
+
+      <h2 class="text-3xl font-bold text-amber-950 text-center py-6">Interseccionalidade e representatividade</h2>
+      <p class="text-2xl">
+        Erika incorpora as intersecções entre raça, gênero, sexualidade e classe. Sua atuação inspira novas gerações a
+        ocupar espaços de poder.
+      </p>
+    </section>
+    </main>
+  <footer class="mt-auto w-[100%] bg-amber-950 text-white items-center justify-items-center pt-8">
+    <p class="text-center lg:text-lg md:text-xl">"Minha humanidade está ligada à sua, pois só podemos ser humanos
+      juntos."</p>
+    <!-- informações de contato -->
+    <div
+      class="lg:w-[70%] md:w-[90%] mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center">
+      <div class="text-left">
+        <h3 class="font-semibold text-3xl py-2 tracking-wider">FALE CONOSCO</h3>
+        <p class="text-xl px-4"> (00) 00000-0000 </p>
+        <p class="py-1 text-xl px-4">AAAAAA@gmail.com</p>
+      </div>
+      <div class="w-full md:w-1 md:h-40 bg-white mx-auto"></div>
+      <div class="text-center md:text-left">
+        <h3 class="font-semibold text-3xl py-2 tracking-wider">REDES SOCIAIS</h3>
+        <div class="grid grid-cols-3 gap-3 place-items-center mt-2 px-2">
+          <img src="/img/linkedin.png" alt="" class="h-8 w-8">
+          <img src="/img/instagram.png" alt="" class="h-8 w-8">
+          <img src="/img/facebook.png" alt="" class="h-8 w-8">
+        </div>
+        <p class="py-3 px-4 text-xl">@AAAAAAAA</p>
+      </div>
+    </div>
+    <p class="text-center pb-4 lg:text-base md:text-lg">"© 2025 Grupo 9. Todos os direitos reservados."</p>
+  </footer>
+
+
+
+
+</body>
+
+</html>
